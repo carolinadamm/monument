@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Complications in Building a Nation: Five Female Voices</title>
+<meta name="description" content="A scrolling history walk: five women, one nation, and the German Colonial War Memorial that was never built on Berlin’s Bersarinplatz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Special+Elite&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   Decolonial History Monument Walk – Immersive Archival Stylesheet
+   ========================================================================== */
+:root{
+  --bg-primary:#F4EFEA; --bg-surface:#EFEAE1; --bg-alt:#E8E2D5;
+  --text-main:#1C1A17; --text-muted:#3E3A35; --text-on-accent:#F4EFEA;
+  --accent-primary:#8C2500; --accent-interactive:#004D80; --focus-ring:#004D80;
+  --border-color:#1C1A17;
+  --card-paper:#E8E2D5;
+  --font-heading:'IM Fell English',Georgia,serif;
+  --font-body:'Source Sans 3',system-ui,sans-serif;
+  --font-stamp:'Special Elite','Courier New',monospace;
+  --font-size-base:1.125rem; --line-height-base:1.65; --line-height-heading:1.2;
+  --max-content-width:72ch; --min-tap-target:48px;
+  --bar-h:52px;
+  --torn-edge-bottom:polygon(0% 0%,100% 0%,100% calc(100% - 10px),95% 100%,90% calc(100% - 8px),85% 100%,80% calc(100% - 6px),75% 100%,70% calc(100% - 10px),65% 100%,60% calc(100% - 7px),55% 100%,50% calc(100% - 9px),45% 100%,40% calc(100% - 6px),35% 100%,30% calc(100% - 10px),25% 100%,20% calc(100% - 8px),15% 100%,10% calc(100% - 6px),5% 100%,0% calc(100% - 8px));
+  --torn-edge-both:polygon(0% 8px,5% 0px,10% 6px,15% 0px,20% 8px,25% 0px,30% 10px,35% 0px,40% 6px,45% 0px,50% 9px,55% 0px,60% 7px,65% 0px,70% 10px,75% 0px,80% 6px,85% 0px,90% 8px,95% 0px,100% 10px,100% calc(100% - 10px),95% 100%,90% calc(100% - 8px),85% 100%,80% calc(100% - 6px),75% 100%,70% calc(100% - 10px),65% 100%,60% calc(100% - 7px),55% 100%,50% calc(100% - 9px),45% 100%,40% calc(100% - 6px),35% 100%,30% calc(100% - 10px),25% 100%,20% calc(100% - 8px),15% 100%,10% calc(100% - 6px),5% 100%,0% calc(100% - 8px));
+  color-scheme:light;
+}
+/* "Dark moments": applied to the whole page while a dark passage is being read */
+:root.dark-moment{
+  --bg-primary:#171513; --bg-surface:#24201D; --bg-alt:#2F2A26;
+  --text-main:#F4EFEA; --text-muted:#D3CDC5; --accent-primary:#D9531E;
+  --accent-interactive:#64B5F6; --focus-ring:#FFD700; --border-color:#F4EFEA;
+}
+*,*::before,*::after{box-sizing:border-box;border-radius:0!important}
+html{font-size:100%;scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--bar-h) + 1rem)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+body{margin:0;padding:var(--bar-h) 0 env(safe-area-inset-bottom,0px);background-color:var(--bg-primary);color:var(--text-main);
+  font-family:var(--font-body);font-size:var(--font-size-base);line-height:var(--line-height-base);word-wrap:break-word;
+  transition:background-color .5s ease,color .5s ease}
+:focus{outline:none}
+:focus-visible{outline:4px solid var(--focus-ring);outline-offset:3px}
+.skip-link{position:absolute;top:-9999px;left:1rem;background:var(--text-main);color:var(--bg-primary);padding:.75rem 1.25rem;z-index:10000;font-weight:700;text-decoration:none}
+.skip-link:focus-visible{top:1rem}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:-1px;padding:0;border:0}
+img{max-width:100%;height:auto;display:block}
+p{margin-top:0;margin-bottom:1.5rem}
+a{color:var(--accent-interactive);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+a:hover,a:focus-visible{text-decoration-thickness:4px}
+h1,h2,h3,h4{font-family:var(--font-heading);color:var(--text-main);line-height:var(--line-height-heading);margin-top:2rem;margin-bottom:1rem;font-weight:400}
+h3{font-size:clamp(1.4rem,3vw,1.8rem)}
+blockquote{margin:2rem 0;padding:1.5rem;background-color:var(--bg-alt);border-left:6px solid var(--accent-primary);font-family:var(--font-heading);font-size:1.25rem;font-style:italic;line-height:1.5}
+blockquote p:last-child{margin:0}
+button{font:inherit;color:inherit}
+
+/* ---------- Sticky continuous timeline bar ---------- */
+.timeline-header{position:fixed;top:0;left:0;right:0;z-index:9000;background-color:#1C1A17;color:#F4EFEA;border-bottom:3px solid #8C2500;
+  padding:calc(.5rem + env(safe-area-inset-top,0px)) 1rem .5rem;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.timeline-header__content{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.25rem;min-height:calc(var(--bar-h) - 1rem)}
+.timeline-header__date{font-family:var(--font-stamp);font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;color:#F4EFEA;white-space:nowrap;min-width:13.5rem}
+.timeline-header__progress-track{flex-grow:1;height:8px;background:#3E3A35;position:relative;border:1px solid #F4EFEA}
+.timeline-header__progress-bar{height:100%;background-color:#D9531E;width:0%;transition:width .1s linear}
+.tick{position:absolute;top:50%;width:26px;height:30px;margin-left:-13px;transform:translateY(-50%);display:flex;justify-content:center;align-items:center}
+.tick::before{content:"";width:3px;height:18px;background:#F4EFEA}
+.tick:hover::before,.tick:focus-visible::before{background:#D9531E;width:5px}
+@media (max-width:640px){ .timeline-header__date{min-width:0;font-size:.85rem} }
+
+/* ---------- Full-page stages (opening, map, finish) ---------- */
+.ride{position:relative}
+.ride--intro{height:520vh}
+.ride--map{height:340vh}
+.ride--outro{height:300vh}
+.stage{position:sticky;top:var(--bar-h);height:calc(100vh - var(--bar-h));height:calc(100svh - var(--bar-h));overflow:hidden;background:#2b2724;margin:0}
+.stage__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.stage__ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#CFC6B6;font-family:var(--font-stamp);text-align:center;padding:2rem}
+.layer-monument{transition:opacity .9s ease}
+.scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.05) 45%,rgba(0,0,0,.5));pointer-events:none;transition:opacity .6s}
+.paper-torn{background-color:var(--bg-surface);border:1px solid rgba(0,0,0,.15);padding:2rem 1.5rem;clip-path:var(--torn-edge-both);box-shadow:0 4px 10px rgba(0,0,0,.08)}
+.stage__card{position:absolute;left:clamp(1rem,5vw,4rem);bottom:clamp(1.25rem,6vh,4.5rem);max-width:min(36rem,calc(100% - 2rem));
+  background:#EFEAE1;color:#1C1A17;opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease;pointer-events:none}
+.stage__card.on{opacity:1;transform:none;pointer-events:auto}
+.stage__card p:last-child{margin-bottom:0}
+.stage__card .big{font-family:var(--font-heading);font-size:clamp(1.5rem,3.2vw,2rem);line-height:1.25}
+.stage__card .lead{font-weight:700;font-size:1.25rem;line-height:1.4}
+.stage__card .who{font-family:var(--font-stamp);color:#8C2500;font-size:.95rem;margin:0}
+.title-card{left:clamp(1rem,6vw,5rem);top:50%;bottom:auto;transform:translateY(-46%);max-width:calc(100% - 2rem);background:transparent;color:#F4EFEA;padding:0}
+.title-card.on{transform:translateY(-50%)}
+.title-card h1{font-size:clamp(2.6rem,7.6vw,6rem);line-height:1.02;margin:0 0 1rem;color:#F4EFEA;text-shadow:0 2px 28px rgba(0,0,0,.6);font-weight:400}
+.title-card h1 .ln{display:block}
+.title-card .sub{font-family:var(--font-stamp);font-size:clamp(1rem,2.2vw,1.35rem);letter-spacing:.06em;margin:0 0 2rem;text-shadow:0 1px 10px rgba(0,0,0,.8)}
+.swap{display:inline-grid;vertical-align:baseline}
+.swap>span{grid-area:1/1;justify-self:start;padding:0 .12em;margin-left:-.12em}
+.swap .w-nation{visibility:hidden;background:#F4EFEA;color:#1C1A17;text-shadow:none}
+.swap.is-nation .w-nation{visibility:visible}
+.swap.is-nation .w-monument{visibility:hidden}
+.scrollcue{display:inline-flex;align-items:center;gap:.6rem;font-weight:700;text-shadow:0 1px 10px rgba(0,0,0,.8)}
+.scrollcue::after{content:"";width:2px;height:30px;background:currentColor;animation:cue 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+
+#mapImg{position:absolute;top:0;left:0;max-width:none;width:auto;height:auto;transform-origin:0 0;will-change:transform}
+.maplabel{position:absolute;left:clamp(1rem,5vw,4rem);bottom:clamp(1.25rem,6vh,4.5rem);max-width:min(30rem,calc(100% - 2rem));background:#EFEAE1;color:#1C1A17}
+.maplabel .yr{font-family:var(--font-heading);font-size:clamp(2.6rem,7vw,4.4rem);line-height:1;margin:0 0 .35rem;color:#8C2500}
+.maplabel p{margin:0}
+.mapdebug{position:absolute;right:1rem;top:1rem;background:#1C1A17;color:#F4EFEA;font-family:var(--font-stamp);padding:.6rem .8rem;font-size:.9rem;display:none}
+.debug .mapdebug{display:block}
+
+/* ---------- Chapters ---------- */
+.chapter{position:relative;padding:4rem 0 5rem}
+.chapter__head{max-width:1180px;margin:0 auto 2.5rem;padding:0 clamp(1rem,4vw,3rem) .6rem;display:flex;align-items:baseline;gap:1.25rem;flex-wrap:wrap;
+  border-bottom:2px solid var(--border-color)}
+.chapter__year{font-size:clamp(4rem,13vw,9rem);line-height:.9;color:var(--accent-primary)}
+.chapter__place{font-family:var(--font-heading);font-size:clamp(1.3rem,2.6vw,1.9rem);color:var(--text-main)}
+.grid{max-width:1180px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem);display:grid;grid-template-columns:minmax(200px,280px) minmax(0,1fr);gap:clamp(1.5rem,5vw,5rem)}
+.speaker__in{position:sticky;top:calc(var(--bar-h) + 1.5rem)}
+.character-card{display:flex;flex-direction:column;align-items:center}
+.portrait{width:100%;height:min(58vh,500px);background:var(--card-paper);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;
+  padding:1rem 1rem 0;clip-path:var(--torn-edge-bottom);border:1px solid rgba(0,0,0,.15)}
+.portrait img{max-height:100%;width:auto;object-fit:contain;transition:filter .9s ease,opacity .9s ease}
+.portrait .ph{align-self:center;color:#3E3A35;font-family:var(--font-stamp);text-align:center;font-size:.9rem}
+.nameplate{margin-top:.9rem;width:100%;border:2px solid var(--border-color);padding:.7rem .9rem;background:var(--bg-surface);transition:background-color .5s}
+.nameplate__name{font-family:var(--font-heading);font-size:1.45rem;line-height:1.15;margin:0}
+.nameplate__role{margin:.25rem 0 0;font-size:.92rem;line-height:1.35;color:var(--text-muted)}
+.nameplate__stamp{display:inline-block;margin:.55rem 0 0;font-family:var(--font-stamp);font-size:.9rem;color:var(--accent-primary);border:2px solid var(--accent-primary);padding:.1rem .45rem;transform:rotate(-2deg)}
+.ai-note{margin:.6rem 0 0;font-size:.8rem;line-height:1.4;color:var(--text-muted);font-style:italic;width:100%}
+.nameplate .unknown{display:none}
+.hidden-speaker .portrait img{filter:brightness(0);opacity:.25}
+.hidden-speaker .nameplate .known,.hidden-speaker .ai-note{display:none}
+.hidden-speaker .nameplate .unknown{display:block}
+.speech{max-width:var(--max-content-width);min-width:0}
+.beat{padding:0 0 clamp(4rem,14vh,8.5rem)}
+.beat p{font-size:clamp(1.15rem,1.6vw,1.3rem);line-height:1.62}
+.beat .lead{font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.35;font-weight:700}
+.beat em{font-style:italic}
+.dark{padding-top:clamp(2rem,10vh,6rem)}
+.dark p{font-size:clamp(1.25rem,2vw,1.5rem);line-height:1.55}
+.fn{font-size:.62em;line-height:0;vertical-align:super;margin-left:.08em;font-weight:600}
+.fn a{text-decoration:none;padding:0 .12em;font-family:var(--font-body)}
+.fn a:hover,.fn a:focus-visible{text-decoration:underline}
+@media (max-width:820px){
+  .grid{grid-template-columns:1fr;gap:0}
+  .speaker{position:sticky;top:var(--bar-h);z-index:20;margin:0 calc(-1 * clamp(1rem,4vw,3rem)) 1.5rem;background:var(--bg-primary);border-bottom:2px solid var(--border-color);transition:background-color .5s}
+  .speaker__in{position:static;padding:.5rem clamp(1rem,4vw,3rem)}
+  .character-card{flex-direction:row;align-items:center;gap:.85rem}
+  .portrait{width:74px;height:100px;flex:none;padding:.3rem .3rem 0}
+  .nameplate{margin:0;border:0;padding:0;background:transparent}
+  .nameplate__name{font-size:1.15rem}
+  .nameplate__role{display:none}
+  .nameplate__stamp{font-size:.78rem;margin-top:.3rem}
+  .ai-note{display:none}
+}
+
+/* ---------- Pictures ---------- */
+.pic{margin:2.25rem 0}
+.pic__frame{position:relative;display:block;background:var(--bg-alt);cursor:help;outline-offset:4px}
+.pic__frame img{width:100%;height:auto;transition:opacity .25s ease}
+.pic__frame:hover img{opacity:.92}
+.pic__ph{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;padding:1.5rem;text-align:center;color:var(--text-muted);
+  font-family:var(--font-stamp);font-size:.9rem;border:2px dashed var(--text-muted)}
+.pic figcaption{margin-top:.55rem;font-size:.95rem;line-height:1.4;color:var(--text-muted)}
+.pic__title{font-style:italic;color:var(--text-main)}
+.pic__credit{display:block;font-family:var(--font-stamp);font-size:.8rem;margin-top:.15rem}
+.pic__more{display:none;background:none;border:0;padding:.35rem 0;min-height:40px;color:var(--accent-interactive);text-decoration:underline;cursor:pointer;font-size:.9rem}
+.pic__desc{display:block}
+@media (hover:hover){ .pic__desc{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap} }
+@media (hover:none){
+  .pic__more{display:inline-block}
+  .pic__desc{display:none;margin-top:.4rem;color:var(--text-main)}
+  .pic.is-open .pic__desc{display:block}
+}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:2.25rem 0}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.25rem 0}
+.pair .pic,.trio .pic{margin:0}
+@media (max-width:640px){ .pair,.trio{grid-template-columns:1fr} }
+
+/* the hover text that follows the cursor */
+.tip{position:fixed;left:0;top:0;z-index:9500;max-width:min(22rem,calc(100vw - 1.5rem));background:#1C1A17;color:#F4EFEA;
+  padding:.7rem .85rem;font-size:.9rem;line-height:1.45;pointer-events:none;opacity:0;transition:opacity .15s ease;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.tip.on{opacity:1}
+.tip strong{display:block;font-family:var(--font-heading);font-weight:400;font-size:1.08rem;margin-bottom:.2rem}
+.tip p{margin:0 0 .35rem}.tip p:last-child{margin:0}
+.tip .src{font-family:var(--font-stamp);font-size:.78rem;color:#D3CDC5}
+.tip i{font-style:italic}
+
+/* ---------- Notes & bibliography ---------- */
+.backmatter{max-width:var(--max-content-width);margin:0 auto;padding:4rem clamp(1rem,4vw,2rem) 5rem}
+.backmatter h2{font-size:clamp(1.75rem,4vw,2.3rem);border-bottom:2px solid var(--border-color);padding-bottom:.4em}
+.backmatter ol,.backmatter ul{padding-left:1.4rem;font-size:.98rem;line-height:1.55}
+.backmatter li{margin-bottom:.7rem}
+.backmatter ul{list-style:none;padding-left:0}
+.backmatter ul li{padding-left:2rem;text-indent:-2rem}
+.backmatter li:target{background:var(--bg-alt);outline:2px solid var(--accent-primary);outline-offset:4px}
+.back{font-size:.85rem;margin-left:.35rem;white-space:nowrap}
+.backmatter .intro-note{color:var(--text-muted);font-size:.98rem}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#jagodja-1891">Skip to the story</a>
+
+<header class="timeline-header" role="banner">
+  <div class="timeline-header__content">
+    <p class="timeline-header__date" id="dateStamp" aria-live="polite" style="margin:0">Bersarinplatz, today</p>
+    <nav class="timeline-header__progress-track" id="track" aria-label="The five voices">
+      <div class="timeline-header__progress-bar" id="progress"></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ OPENING ============ -->
+<section class="ride ride--intro" id="intro" data-date="Bersarinplatz, today" aria-labelledby="siteTitle">
+  <figure class="stage" data-tip="plaza_monument">
+    <div class="stage__ph" data-ph>Bersarinplatz, Berlin-Friedrichshain</div>
+    <img class="stage__img" data-stage="plaza_empty" alt="" hidden>
+    <img class="stage__img layer-monument" id="monumentLayer" data-stage="plaza_monument" alt="" hidden>
+    <figcaption class="visually-hidden">Photomontage: Bersarinplatz with the colonial memorial (an elephant on a pedestal) in its centre, fading into the real, empty square.</figcaption>
+    <div class="scrim" id="scrim"></div>
+
+    <div class="stage__card title-card on" data-step="0">
+      <h1 id="siteTitle">
+        <span class="visually-hidden">Complications in Building a Monument [Nation]</span>
+        <span aria-hidden="true">
+          <span class="ln">Complications</span>
+          <span class="ln">in Building a</span>
+          <span class="ln"><span class="swap" id="swap"><span class="w-monument">Monument</span><span class="w-nation">Nation</span></span></span>
+        </span>
+      </h1>
+      <p class="sub">Five Female Voices</p>
+      <p class="scrollcue">Scroll to begin</p>
+    </div>
+    <div class="stage__card paper-torn" data-step="1">
+      <p class="big">This is Bersarinplatz.</p>
+      <p>And today, I present to you its monument: the German Colonial War Memorial.</p>
+    </div>
+    <div class="stage__card paper-torn" data-step="2">
+      <p class="big">But wait… what happened?</p>
+      <p class="lead">The memorial is gone.</p>
+    </div>
+    <div class="stage__card paper-torn" data-step="3">
+      <p class="big">This moment, right now, was never predictable with certainty.</p>
+      <p>Or… was it never there?</p>
+    </div>
+    <div class="stage__card paper-torn" data-step="4">
+      <p><strong>Historical contingency</strong> refers to the idea that everything we see today is a result of multiple conditions.</p>
+      <p>How was the German Colonial War Memorial’s creation dependent (or, contingent) on other circumstances? And does that mean it exists, today?</p>
+    </div>
+    <div class="stage__card paper-torn" data-step="5">
+      <p class="big">To answer this question, we have to travel back to the year 1891, in “German East Africa”.</p>
+    </div>
+  </figure>
+</section>
+
+<!-- ============ THE MAP (shown once) ============ -->
+<section class="ride ride--map" id="mapride" data-date="German Empire, 1880s" aria-label="A colonial map">
+  <figure class="stage" id="mapStage" data-tip="map">
+    <div class="stage__ph" data-ph>Colonial map</div>
+    <img id="mapImg" data-stage="map" alt="Map of the German colonies in the 1880s." hidden>
+    <figcaption class="visually-hidden">Colonial map, 1884. 1880s map of German colonies in the world (excluding the Americas). The view travels slowly from Germany to East Africa.</figcaption>
+    <div class="maplabel paper-torn" aria-live="polite">
+      <p class="yr" id="mapYr">Germany</p>
+      <p id="mapTxt">A late-comer in the race for colonies.</p>
+    </div>
+    <div class="mapdebug" id="mapDebug">Click the map to read a point</div>
+  </figure>
+</section>
+
+<!-- ============ 1. JAGODJA, 1891 ============ -->
+<section class="chapter" id="jagodja-1891" data-chapter data-date="Kilimanjaro, 1891" data-label="Jagodja, 1891">
+  <h2 class="chapter__head"><span class="chapter__year">1891</span><span class="chapter__place">Jagodja, on the slopes of Kilimanjaro</span></h2>
+  <div class="grid">
+    <aside class="speaker" aria-label="Who is speaking">
+      <div class="speaker__in character-card">
+        <div class="portrait" data-char="char_jagodja1891"></div>
+        <div class="nameplate">
+          <p class="nameplate__name">Jagodja</p>
+          <p class="nameplate__role">A woman of Mamba, sister of the mangi Manamia</p>
+          <p class="nameplate__stamp">Kilimanjaro, 1891</p>
+        </div>
+        <p class="ai-note" data-ainote="char_jagodja1891"></p>
+      </div>
+    </aside>
+    <div class="speech">
+      <div class="beat">
+        <p class="lead">My name is Jagodja. I was born on the slopes of the great mountain.</p>
+        <p>My brother is Manamia, mangi of Mamba. <em>Mangi</em> means chief. My family is of rank. My people are the Chagga.</p>
+        <figure class="pic" data-slot="kili"></figure>
+      </div>
+      <div class="beat">
+        <p>“Chagga” – that is a word for outsiders. On the mountain we say: I am a Mamba.<sup class="fn"><a href="#n1" id="r1">1</a></sup> The people of Pare are our neighbours, and sometimes our enemies. The people of Meru and Masai too.</p>
+        <p>My grandmother says that before the strangers came, nobody here called himself black. Why would you? Everybody was. Now we hear it every day. Black. Native. Savage.</p>
+        <p class="lead">The strangers came and gave us a colour.</p>
+      </div>
+      <div class="beat">
+        <p>The first ones only looked. Traders from the coast came for ivory. Then white men who climbed up to the snow, and drew maps, and wrote in little books.</p>
+        <figure class="pic" data-slot="landing"></figure>
+        <div class="pair">
+          <figure class="pic" data-slot="camp"></figure>
+          <figure class="pic" data-slot="dar"></figure>
+        </div>
+      </div>
+      <div class="beat">
+        <p class="lead">This year a new one came. His name is Peters.</p>
+        <p>He calls himself Reichskommissar. He says the mountain now belongs to something called German East Africa.</p>
+        <div class="pair">
+          <figure class="pic" data-slot="force"></figure>
+          <figure class="pic" data-slot="peters"></figure>
+        </div>
+      </div>
+      <div class="beat dark" data-dark>
+        <p>The first thing Peters built, before his own house was finished, was a gallows. So that everybody understands who rules. Then he took women.<sup class="fn"><a href="#n2" id="r2">2</a></sup> Daughters of chiefs, girls from the villages.</p>
+        <p class="lead">He took me.</p>
+        <p>The porters who carry things down to the coast say Peters is furious. They have a name for him already: <em>mkono wa damu</em>. The man with blood on his hands. They say he carries boxes, many of them, that contain our country’s soul.<sup class="fn"><a href="#n3" id="r3">3</a></sup></p>
+        <p>They also say that those white powerful men often take women for themselves. That makes me wonder about the country he came from. If there are more men, white, like him, how many more like me, forced concubines, must there be?</p>
+      </div>
+      <div class="beat">
+        <p class="lead">Now, this is what they call “German East Africa”.<sup class="fn"><a href="#n4" id="r4">4</a></sup></p>
+        <figure class="pic" data-slot="moshi"></figure>
+        <p>It is clear to everyone that I am as little German as I am “East African”. Nobody here has ever been East African.</p>
+        <p class="lead">I am a woman of Mamba.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. ROSA LUXEMBURG, 1914 ============ -->
+<section class="chapter hidden-speaker" id="rosa" data-chapter data-date="Berlin, 1914" data-label="Rosa Luxemburg, 1914">
+  <h2 class="chapter__head"><span class="chapter__year">1914</span><span class="chapter__place">Berlin, capital of the German Empire</span></h2>
+  <div class="grid">
+    <aside class="speaker" aria-label="Who is speaking">
+      <div class="speaker__in character-card">
+        <div class="portrait" data-char="char_rosa"></div>
+        <div class="nameplate">
+          <div class="unknown">
+            <p class="nameplate__name">Who is speaking?</p>
+            <p class="nameplate__role">Keep reading.</p>
+          </div>
+          <div class="known">
+            <p class="nameplate__name">Rosa Luxemburg</p>
+            <p class="nameplate__role">Socialist, member of the SPD</p>
+            <p class="nameplate__stamp">Berlin, 1914</p>
+          </div>
+        </div>
+        <p class="ai-note" data-ainote="char_rosa"></p>
+      </div>
+    </aside>
+    <div class="speech">
+      <div class="beat">
+        <p class="lead">Inspect this caricature closely. You have just met Jagodja. It shows how her story ends.<sup class="fn"><a href="#n5" id="r5">5</a></sup><sup class="fn"><a href="#n6" id="r6">6</a></sup></p>
+        <figure class="pic" data-slot="brunnen"></figure>
+        <p>Carl Peters had her hanged – you can see him in the middle with the gallows. My party leader accused him loudly in the parliament:<sup class="fn"><a href="#n7" id="r7">7</a></sup></p>
+        <blockquote><p>“If your colonial policy has such consequences, then you have every reason to turn your backs on the whole of Africa as quickly as possible and to complete your work of civilization and culture here in Germany.”<sup class="fn"><a href="#n8" id="r8">8</a></sup></p></blockquote>
+      </div>
+      <div class="beat">
+        <p>Nowadays it’s harder to excite the public for owning “exotic” territories. Every year, new scandals come to light, ranging from Peters’ unjust hanging of Jagodja to genocide.<sup class="fn"><a href="#n9" id="r9">9</a></sup> My party was glad to see Peters losing his post.</p>
+        <p class="lead">But this year? This year the Kaiser gave him his title back and a pension from his own pocket.<sup class="fn"><a href="#n10" id="r10">10</a></sup></p>
+      </div>
+      <div class="beat" data-reveal>
+        <p class="lead">Sorry. Did I forget to introduce myself?</p>
+        <p>My name is Rosa Luxemburg. I am 33 years old and have spent much of my political life fighting for socialism, democracy, and international solidarity among workers. Since the 1890s, I have been active in the Social Democratic Party of Germany (SPD).</p>
+      </div>
+      <div class="beat">
+        <p>But you wanted to know more about that monument. The German Colonial War Memorial was planned to be placed on Baltenplatz, the one you know as “Bersarinplatz” today.</p>
+        <p>A competition has been organised to build a grand German Colonial War Memorial in Berlin. It is supported by colonial circles, Reichstag politicians, and state authorities. It should be a reminder of their war successes abroad. Many supporters hope it will become a national shrine that strengthens enthusiasm for Germany’s colonial empire.<sup class="fn"><a href="#n11" id="r11">11</a></sup></p>
+      </div>
+      <div class="beat">
+        <p>The city suffers from what people already call a <em>Denkmalseuche</em>, a monument epidemic.<sup class="fn"><a href="#n12" id="r12">12</a></sup></p>
+        <p>Since German unification under Otto von Bismarck in 1871, the ruling classes have worked tirelessly to create a common national identity.<sup class="fn"><a href="#n13" id="r13">13</a></sup> The empire brought Prussians, Bavarians, Saxons, and many others under one flag. And monuments at every corner are supposed to remind the German people that they belong together.</p>
+        <p class="lead">But their boundary drawing didn’t stop there.</p>
+      </div>
+      <div class="beat">
+        <p>Feeling behind in the colonial race, many imperialists proclaim that “am deutschen Wesen soll die Welt genesen” (“the world shall be healed by the German spirit”).<sup class="fn"><a href="#n14" id="r14">14</a></sup> Now Germany is not only unified, but unified by the belief that its superior culture is destined to guide others.</p>
+        <p>From this belief grows militarism. Wars become proof of national strength. Military sacrifice becomes sacred. The planned monument is intended not merely to remember the (White) dead but to cultivate a national-colonial consciousness and strengthen Germany’s self-image as a colonial great power.<sup class="fn"><a href="#n15" id="r15">15</a></sup></p>
+        <p class="lead">And now, in 1914, this intoxication with power is driving Europe toward catastrophe.</p>
+      </div>
+      <div class="beat dark" data-dark>
+        <p>I was born in Zamość, in the part of Poland ruled by the Russian Tsar. I am Jewish. I came to Germany in 1898 – and to become German, I married a man on paper.<sup class="fn"><a href="#n16" id="r16">16</a></sup> One signature, and I was a citizen. That is how solid a nation is: a stamp in a passport office.</p>
+        <p class="lead">For me, the nation is a cage built so that the common people have a reason to shoot each other.</p>
+        <blockquote><p>“I feel at home in the entire world, wherever there are clouds and birds and human tears.”<sup class="fn"><a href="#n17" id="r17">17</a></sup></p></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. HEDWIG HEYL, JUNE 1914 ============ -->
+<section class="chapter" id="hedwig" data-chapter data-date="Berlin, June 1914" data-label="Hedwig Heyl, 1914">
+  <h2 class="chapter__head"><span class="chapter__year">1914</span><span class="chapter__place">June, Pariser Platz, Berlin</span></h2>
+  <div class="grid">
+    <aside class="speaker" aria-label="Who is speaking">
+      <div class="speaker__in character-card">
+        <div class="portrait" data-char="char_hedwig"></div>
+        <div class="nameplate">
+          <p class="nameplate__name">Hedwig Heyl</p>
+          <p class="nameplate__role">Leader of the Women’s League of the German Colonial Society</p>
+          <p class="nameplate__stamp">Berlin, June 1914</p>
+        </div>
+        <p class="ai-note" data-ainote="char_hedwig"></p>
+      </div>
+    </aside>
+    <div class="speech">
+      <div class="beat">
+        <p class="lead">My name is Hedwig Heyl. It’s still 1914, June to be precise, and I am sixty-four years old.</p>
+        <p>Since 1910 I have led the Women’s League of the German Colonial Society.<sup class="fn"><a href="#n18" id="r18">18</a></sup> The German Colonial Society that I lead has nineteen thousand members. We choose decent, hard-working German girls and send them to South West Africa as housekeepers and teachers – and, God willing, as wives.<sup class="fn"><a href="#n19" id="r19">19</a></sup></p>
+      </div>
+      <div class="beat">
+        <p>Too many of our men out there lived with native women. Their children were neither one thing nor the other. The government has now forbidden such marriages and taken German citizenship away from those children. Quite right.</p>
+        <p class="lead">A nation must know where its border runs – and the border runs through the family.</p>
+      </div>
+      <div class="beat">
+        <p>I have just walked through the exhibition here at the Academy on Pariser Platz, where the designs for our colonial warriors’ monument are shown.</p>
+        <figure class="pic" data-slot="pariser"></figure>
+        <p class="lead">That’s right, we’re building a monument!</p>
+        <p>I would like it to be built right here, in the centre. Can you believe they allocated a remote location like Baltenplatz?<sup class="fn"><a href="#n20" id="r20">20</a></sup> The money is there: 320,000 marks, granted by the Reichstag and the Bundesrat. A competition of the finest artists of the German Kaiserreich will determine the design – this is the exhibition I just looked at.</p>
+      </div>
+      <div class="beat">
+        <p>My favourite is Hahn and Sattler: a column twenty-five metres high, and on top a Victoria storming forward with sword and shield.<sup class="fn"><a href="#n21" id="r21">21</a></sup> Like our Victory Column.</p>
+        <p class="lead">Clear. Proud. Every child understands it.</p>
+        <figure class="pic" data-slot="hahn"></figure>
+      </div>
+      <div class="beat">
+        <p>Adolf Brütt designed to place a white rider on horseback, and the natives walk peacefully beside him. Exactly how it should be: we lead, they follow, and everyone is content.</p>
+        <div class="pair">
+          <figure class="pic" data-slot="bruett"></figure>
+          <figure class="pic" data-slot="bruett_land"></figure>
+        </div>
+        <div class="pair">
+          <figure class="pic" data-slot="wrba"></figure>
+          <figure class="pic" data-slot="cauer"></figure>
+        </div>
+      </div>
+      <div class="beat">
+        <p class="lead">And the winner? Fritz Behn, from Munich. An elephant. An African elephant on a pedestal!</p>
+        <figure class="pic" data-slot="behn"></figure>
+        <p>It is exotic, I grant you. Strong. But where is the German in it? Where are our men, our sacrifice? We are honouring the soldiers who fell defending Germans overseas, and we put up a zoo animal.</p>
+        <p>I am not alone. The critics have torn it apart, and His Majesty has now ordered a second round of the competition.<sup class="fn"><a href="#n22" id="r22">22</a></sup> Let us hope sense returns.</p>
+        <figure class="pic" data-slot="newspaper"></figure>
+      </div>
+      <div class="beat">
+        <p>I say the nation is a family. It has a father – the Kaiser. It has mothers – us. It has children who must be taught obedience, cleanliness, duty.</p>
+        <p class="lead">And like every family, it decides who sits at its table.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. AGNES VON BOEMCKEN, 1932 ============ -->
+<section class="chapter" id="agnes" data-chapter data-date="Bremen, 1932" data-label="Agnes von Boemcken, 1932">
+  <h2 class="chapter__head"><span class="chapter__year">1932</span><span class="chapter__place">Bremen, at the unveiling of the elephant</span></h2>
+  <div class="grid">
+    <aside class="speaker" aria-label="Who is speaking">
+      <div class="speaker__in character-card">
+        <div class="portrait" data-char="char_agnes"></div>
+        <div class="nameplate">
+          <p class="nameplate__name">Agnes von Boemcken</p>
+          <p class="nameplate__role">Chairwoman of the Women’s League of the German Colonial Society</p>
+          <p class="nameplate__stamp">Bremen, 1932</p>
+        </div>
+        <p class="ai-note" data-ainote="char_agnes"></p>
+      </div>
+    </aside>
+    <div class="speech">
+      <div class="beat">
+        <p class="lead">My name is Agnes von Boemcken.</p>
+        <p>This year, 1932, I became chairwoman of the Women’s League of the German Colonial Society – the league Hedwig Heyl led.<sup class="fn"><a href="#n23" id="r23">23</a></sup> Frau Heyl is eighty-two now and lives quietly in Berlin. I wish she had been here today. This, Bremen, is her hometown.<sup class="fn"><a href="#n24" id="r24">24</a></sup></p>
+        <p>Because look at what was just unveiled: ten metres of dark red brick. An elephant.</p>
+        <figure class="pic" data-slot="opening1932"></figure>
+        <p class="lead">Yes – Fritz Behn’s elephant. The monument Berlin failed to build in 1914 was opened today.<sup class="fn"><a href="#n25" id="r25">25</a></sup></p>
+        <figure class="pic" data-slot="unsere"></figure>
+      </div>
+      <div class="beat">
+        <p class="lead">Why did it take so long? Why in a different city?</p>
+        <p>In short, the world war broke out. Rosa Luxemburg’s party, the Social Democrats, that’s right, they voted for war in 1914.</p>
+        <figure class="pic" data-slot="reichstag"></figure>
+        <p>Meanwhile, the Allies stripped us of our overseas colonies and demanded impossible reparations. Decent German families were forced into poverty while profiteers and foreigners lived luxuriously in the cities.</p>
+        <figure class="pic" data-slot="versailles"></figure>
+        <p>Again in 1926, the colonial working group applied for the monument to be built in Bremen, because the association was represented strongly here.<sup class="fn"><a href="#n26" id="r26">26</a></sup></p>
+        <figure class="pic" data-slot="antrag"></figure>
+      </div>
+      <div class="beat">
+        <p>Half a decade later, the colonial question was revived. The Germany of today is not the Germany that emerged from defeat and humiliation.</p>
+        <p class="lead">Under Hitler, a new national consciousness is awakening.</p>
+        <figure class="pic" data-slot="exhibition"></figure>
+        <p>The needs of nations remain. The need for space, opportunity, resources, and development remains.</p>
+      </div>
+      <div class="beat">
+        <p>On skulls and bones, shipped in from the South, the intellectual foundation for a different world order has been built.<sup class="fn"><a href="#n27" id="r27">27</a></sup> We are told by racial science that human groups possess distinct inherited characteristics and historical capacities. Many Germans therefore regard the preservation and cultivation of their own racial and cultural community as not merely a right but a duty.</p>
+        <p class="lead">This elephant symbolises our ongoing superiority. The German Reich will expand beyond its borders again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. JAGODJA, 2026 ============ -->
+<section class="chapter" id="jagodja-2026" data-chapter data-date="Moshi, 2026" data-label="Jagodja, 2026">
+  <h2 class="chapter__head"><span class="chapter__year">2026</span><span class="chapter__place">Moshi, below the mountain, Tanzania</span></h2>
+  <div class="grid">
+    <aside class="speaker" aria-label="Who is speaking">
+      <div class="speaker__in character-card">
+        <div class="portrait" data-char="char_jagodja2026"></div>
+        <div class="nameplate">
+          <p class="nameplate__name">Jagodja</p>
+          <p class="nameplate__role">Eighteen, named after her great-great-great-aunt</p>
+          <p class="nameplate__stamp">Moshi, 2026</p>
+        </div>
+        <p class="ai-note" data-ainote="char_jagodja2026"></p>
+      </div>
+    </aside>
+    <div class="speech">
+      <div class="beat">
+        <p class="lead">My name is Jagodja. I am eighteen.</p>
+        <p>I live near Moshi, below the mountain, in Tanzania. I am named after my great-great-great-aunt.</p>
+        <p class="lead">It’s the year 2026.</p>
+        <figure class="pic" data-slot="elephant_today"></figure>
+      </div>
+      <div class="beat">
+        <p>You heard Agnes von Boemcken talk about the skulls. Thousands of them are still in Berlin, in basements of prestigious research institutions and even family property.<sup class="fn"><a href="#n28" id="r28">28</a></sup> In 2023, scientists used DNA to match skulls with families from my region: an adviser of Mangi Meli, and Mangi Molelia of Kibosho and his relatives.</p>
+        <p>In February this year, two of Molelia’s descendants flew to Berlin to stand in front of the bones of their ancestors.<sup class="fn"><a href="#n29" id="r29">29</a></sup> The museum foundation has offered to give them back. Our own government has not answered yet.</p>
+        <p class="lead">But these are drops in the ocean.</p>
+        <div class="pair">
+          <figure class="pic" data-slot="charite2011"></figure>
+          <figure class="pic" data-slot="charite2014"></figure>
+        </div>
+        <div class="pair">
+          <figure class="pic" data-slot="gendarmen2018"></figure>
+          <figure class="pic" data-slot="protest2004"></figure>
+        </div>
+      </div>
+      <div class="beat">
+        <p>Berlin has also changed some street names. Petersallee is gone since 2024; one part is now Maji-Maji-Allee. The Mohrenstraße was renamed Anton-Wilhelm-Amo-Straße in August 2025 – after more than thirty years of protest and a court fight until the day before.<sup class="fn"><a href="#n30" id="r30">30</a></sup></p>
+        <figure class="pic" data-slot="mohrenstrasse"></figure>
+        <p class="lead">Thirty years for a street sign. That tells you how hard it is.</p>
+        <figure class="pic" data-slot="decolonize"></figure>
+      </div>
+      <div class="beat">
+        <p>And the elephant? Later, during repairs, they took the words “Unseren Kolonien” (to our colonies) off it. In 1989 Bremen decided to turn it around, and in 1990, when Namibia became independent, they renamed it the Anti-Colonial Monument.<sup class="fn"><a href="#n31" id="r31">31</a></sup></p>
+        <figure class="pic" data-slot="anticolonial"></figure>
+        <p>Namibia’s president came and unveiled a plaque for the victims of German rule.<sup class="fn"><a href="#n32" id="r32">32</a></sup> In 2009 people brought stones from the Omaheke desert, where Herero families died of thirst after the battle at the Waterberg, and laid them in a circle beside the elephant.</p>
+        <figure class="pic" data-slot="ohamakari"></figure>
+        <div class="trio">
+          <figure class="pic" data-slot="detail1"></figure>
+          <figure class="pic" data-slot="detail2"></figure>
+          <figure class="pic" data-slot="mandela"></figure>
+        </div>
+        <p>I cannot speak for the Ovaherero and Nama; Namibia is almost as far from my home as Germany is. Many of them say Germany still owes them a real apology and reparations, not “development aid”.</p>
+        <p class="lead">The talks are not finished.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINISH: BACK ON THE EMPTY PLAZA ============ -->
+<section class="ride ride--outro" id="outro" data-date="Bersarinplatz, today" aria-label="Back on Bersarinplatz">
+  <figure class="stage" data-tip="plaza_empty">
+    <div class="stage__ph" data-ph>Bersarinplatz, today</div>
+    <img class="stage__img" data-stage="plaza_empty" alt="" hidden>
+    <figcaption class="visually-hidden">Bersarinplatz today, without the monument.</figcaption>
+    <div class="scrim" style="opacity:.5"></div>
+    <div class="stage__card paper-torn" data-ostep="1">
+      <p class="big">We’re back on Bersarinplatz.</p>
+      <p class="lead">Nothing was built in the end.</p>
+    </div>
+    <div class="stage__card paper-torn" data-ostep="2">
+      <p>Contingency explains that history can go in many unexpected ways. By now you probably know that this is not the only way to tell the story. Contingency also means that we cannot predict the future.</p>
+      <p class="lead">So who says this is the end of the story?</p>
+    </div>
+    <div class="stage__card paper-torn" data-ostep="3">
+      <p class="big">For me, a nation is a story – and the question is always who gets left out of it.</p>
+      <p class="who">Jagodja, 2026</p>
+    </div>
+  </figure>
+</section>
+
+<!-- ============ NOTES & BIBLIOGRAPHY ============ -->
+<section class="backmatter" id="sources" data-date="Sources" aria-label="Notes and bibliography">
+  <h2>Notes</h2>
+  <ol id="notes"></ol>
+
+  <h2>Bibliography</h2>
+  <ul>
+    <li>Biermann, Ulrich, and Veronika Bock. “ZeitZeichen: 05.03.1871 – Geburtstag von Rosa Luxemburg” [Rosa Luxemburg’s birthday]. WDR 5, February 5, 2021. <a href="https://www1.wdr.de/radio/wdr5/sendungen/zeitzeichen/luxemburg-108.html">https://www1.wdr.de/radio/wdr5/sendungen/zeitzeichen/luxemburg-108.html</a>.</li>
+    <li><i>Bremer Nachrichten</i> (Bremen). “Einweihung des Deutschen Kolonial-Ehrenmals” [Unveiling of the German Colonial Memorial]. July 7, 1932. Microfilm collection, p. 3. Staats- und Universitätsbibliothek Bremen (SuUB).</li>
+    <li>“Bremische Bürgerschaft 1931” [Bremen City Parliament, 1931]. 1931. <a href="http://brema.suub.uni-bremen.de/brembuerg/2925100">http://brema.suub.uni-bremen.de/brembuerg/2925100</a>.</li>
+    <li>Brennecke, Christiana. “Der Deutsch-Koloniale Frauenbund” [The German Colonial Women’s League]. <i>Kolonialismus begegnen</i>, June 6, 2023. <a href="https://kolonialismus-begegnen.de/geschichten/der-deutsch-koloniale-frauenbund/">https://kolonialismus-begegnen.de/geschichten/der-deutsch-koloniale-frauenbund/</a>.</li>
+    <li>Cornelius, Jim. “Germany’s Dark Frontiers — The Scandalous Carl Peters.” <i>Frontier Partisans</i>, August 7, 2025. <a href="https://frontierpartisans.com/germanys-dark-frontiers-part-i-the-scandalous-carl-peters/">https://frontierpartisans.com/germanys-dark-frontiers-part-i-the-scandalous-carl-peters/</a>.</li>
+    <li><i>Daheim</i>. “Entwürfe für ein Kolonialdenkmal in Berlin” [Designs for a colonial memorial in Berlin]. June 20, 1914.</li>
+    <li>Diallo, Oumar, and Joachim Zeller. <i>Berlin – Eine postkoloniale Metropole: Ein historisch-kritischer Stadtrundgang im Bezirk Mitte</i> [Berlin – a postcolonial metropolis: a historical-critical city walk through the Mitte district]. Edited by Farafina e. V. Berlin-Moabit. Metropol-Verlag, 2024.</li>
+    <li>Engert, Max. “Der Kolonialbrunnen” [The colonial fountain]. <i>Der Wahre Jacob</i>, December 2, 1911.</li>
+    <li>Epstein, Klaus. “Erzberger and the German Colonial Scandals, 1905–1910.” <i>The English Historical Review</i> 74, no. 293 (1959): 637–63.</li>
+    <li>Gellner, Ernest. “Nationalisms and the New World Order.” <i>Bulletin of the American Academy of Arts and Sciences</i> 47, no. 5 (1994): 29–36. <a href="https://doi.org/10.2307/3824450">https://doi.org/10.2307/3824450</a>.</li>
+    <li>German History in Documents and Images. “August Bebel Accuses the Colonialist Carl Peters of Two Murders.” 2026. <a href="https://germanhistorydocs.org/en/forging-an-empire-bismarckian-germany-1866-1890/august-bebel-accuses-the-colonialist-carl-peters-of-two-murders-1896">https://germanhistorydocs.org/en/forging-an-empire-bismarckian-germany-1866-1890/august-bebel-accuses-the-colonialist-carl-peters-of-two-murders-1896</a>.</li>
+    <li>Heimpel, Elisabeth. “Heyl, Hedwig, geborene Crüsemann.” In <i>Neue Deutsche Biographie</i> [New German Biography], vol. 9. Duncker &amp; Humblot, 1972.</li>
+    <li>Hilt, Kerstin. “Deutsche Kolonien: Carl Peters” [German colonies: Carl Peters]. <i>Planet Wissen</i>, November 29, 2024. <a href="https://www.planet-wissen.de/geschichte/deutsche_geschichte/deutsche_kolonien/pwiewissensfrage588.html">https://www.planet-wissen.de/geschichte/deutsche_geschichte/deutsche_kolonien/pwiewissensfrage588.html</a>.</li>
+    <li>“Karl Körner in Südwestafrika” [Karl Körner in South West Africa]. Accessed November 8, 2026. <a href="https://www.digicult-verbund.de/item/DE-MUS-076111/lido/Album%20252-22">https://www.digicult-verbund.de/item/DE-MUS-076111/lido/Album 252-22</a>.</li>
+    <li>“Nachfahren von Mangi Molelia in Berlin” [Descendants of Mangi Molelia in Berlin]. Stiftung Preußischer Kulturbesitz. Accessed November 10, 2026. <a href="https://www.preussischer-kulturbesitz.de/meldung/artikel/2026/02/19/nachfahren-von-mangi-molelia-in-berlin.html">https://www.preussischer-kulturbesitz.de/meldung/artikel/2026/02/19/nachfahren-von-mangi-molelia-in-berlin.html</a>.</li>
+    <li>Nettl, John Peter. <i>Rosa Luxemburg</i>. London: Oxford University Press, 1969. <a href="http://archive.org/details/rosaluxemburg0000unse">http://archive.org/details/rosaluxemburg0000unse</a>.</li>
+    <li>Peters, Carl. <i>Das deutsch-ostafrikanische Schutzgebiet</i> [The German East African protectorate]. 1895. <a href="http://archive.org/details/11612133bsb">http://archive.org/details/11612133bsb</a>.</li>
+    <li>Roos, Ulrich. <i>Deutsche Außenpolitik: Eine Rekonstruktion der grundlegenden Handlungsregeln</i> [German foreign policy: a reconstruction of its basic rules of action]. Springer-Verlag, 2010.</li>
+    <li>Schnee, Heinrich, Julius von Boemcken, and Agnes von Boemcken. <i>Das Buch der Deutschen Kolonien</i> [The book of the German colonies]. 1937. <a href="http://archive.org/details/SC038DasBuchDerDeutschenKolonien">http://archive.org/details/SC038DasBuchDerDeutschenKolonien</a>.</li>
+    <li>Speitkamp, Winfried. <i>Deutsche Kolonialgeschichte</i> [German colonial history]. Reclam, 2014.</li>
+    <li>Wegner, Agnes Lisa, and Cece Mlay, dirs. <i>The Empty Grave</i>. Documentary, 2024. 97 min.</li>
+    <li>White, Luise. <i>Speaking with Vampires: Rumor and History in Colonial Africa</i>. University of California Press, 2000.</li>
+    <li>Zeller, Joachim. <i>Kolonialdenkmäler und Geschichtsbewußtsein: Eine Untersuchung der kolonialdeutschen Erinnerungskultur</i> [Colonial monuments and historical consciousness]. IKO-Verlag für Interkulturelle Kommunikation, 2000.</li>
+  </ul>
+
+  <h2>Image credits</h2>
+  <p class="intro-note">The character portraits are AI-generated. All other pictures are listed in the order they appear.</p>
+  <ul id="credits"></ul>
+</section>
+</main>
+
+<div class="tip" id="tip" aria-hidden="true"></div>
+
+<script>
+/* ==========================================================================
+   SETTINGS
+   ========================================================================== */
+/* Folder (next to index.html) that holds every picture. */
+var IMG_DIR = "images/";
+/* If a file isn't found under its exact name, these endings are tried too. */
+var EXTS = [".jpg", ".jpeg", ".png", ".webp", ".JPG", ".JPEG", ".PNG"];
+/* Map flight: where the view starts (Germany) and ends (East Africa).
+   x and y are fractions of the map picture: 0 = left/top edge, 1 = right/bottom edge.
+   To find exact points, open the page with ?mapdebug at the end of the address
+   and click on the map. zoom 1 = the whole screen is filled once. */
+var MAP_FROM = {x: 0.47, y: 0.22, zoom: 2.6};
+var MAP_TO   = {x: 0.54, y: 0.58, zoom: 2.6};
+
+/* ==========================================================================
+   PICTURES: file name, caption, hover text, short credit, full credit
+   ========================================================================== */
+var P91 = "Peters, Carl. <i>Die deutsche Emin-Pascha-Expedition</i> [The German Emin Pasha expedition]. Illustrations by Rudolf Hellgrewe. Munich: R. Oldenbourg, 1891. <a href=\"http://archive.org/details/diedeutscheeminp00pete\">http://archive.org/details/diedeutscheeminp00pete</a>.";
+var P95 = "Peters, Carl. <i>Das deutsch-ostafrikanische Schutzgebiet</i> [The German East African protectorate]. Munich: R. Oldenbourg, 1895. <a href=\"http://archive.org/details/11612133bsb\">http://archive.org/details/11612133bsb</a>.";
+var DAHEIM = "“Entwürfe für ein Kolonialdenkmal in Berlin” [Designs for a colonial memorial in Berlin]. <i>Daheim</i>, June 20, 1914, 2.";
+var KUNSTWELT = "<i>Die Kunstwelt</i> 3, no. 19–20 (July 1914).";
+var DZ = "Diallo, Oumar, and Joachim Zeller. <i>Berlin – Eine postkoloniale Metropole</i> [Berlin – a postcolonial metropolis]. Metropol-Verlag, 2024.";
+var WIKI = "“Antikolonialdenkmal” [Anti-Colonial Monument]. Wikipedia (German), October 31, 2026. <a href=\"https://de.wikipedia.org/w/index.php?title=Antikolonialdenkmal&amp;oldid=271782449\">https://de.wikipedia.org/w/index.php?title=Antikolonialdenkmal&amp;oldid=271782449</a>.";
+var WEISSER = "Weisser, Michael. “Der Elefant – Bremen” [The elephant – Bremen]. 2017. <a href=\"https://www.rice.de/14_BREMEN/HB_ELEFANT_2008/1_Elefant.html\">https://www.rice.de/14_BREMEN/HB_ELEFANT_2008/1_Elefant.html</a>.";
+
+var SLOTS = {
+  /* --- characters --- */
+  char_jagodja1891:{file:"char-jagodja-1891.png",title:"Jagodja, 1891",
+    alt:"Pencil drawing of Jagodja, a young Chagga woman in a pale dress with a bead necklace. It’s hard to know what Jagodja looked like. This is one AI-generated possibility.",
+    note:"It’s hard to know what Jagodja looked like. This portrait is one AI-generated possibility."},
+  char_rosa:{file:"char-rosa-luxemburg.png",title:"Rosa Luxemburg, 1914",
+    alt:"Pencil drawing of Rosa Luxemburg in a dark suit and long skirt, hands behind her back. AI-generated based on historical photos.",
+    note:"Portrait AI-generated, based on historical photos."},
+  char_hedwig:{file:"char-hedwig-heyl.png",title:"Hedwig Heyl, 1914",
+    alt:"Pencil drawing of Hedwig Heyl, an older woman in a long dress and shawl. AI-generated based on historical photos.",
+    note:"Portrait AI-generated, based on historical photos."},
+  char_agnes:{file:"char-agnes-von-boemcken.png",title:"Agnes von Boemcken, 1932",
+    alt:"Pencil drawing of Agnes von Boemcken in a belted coat and wide hat. AI-generated based on one historical photo.",
+    note:"Portrait AI-generated, based on one historical photo."},
+  char_jagodja2026:{file:"char-jagodja-2026.png",title:"Jagodja, 2026",
+    alt:"Pencil drawing of Jagodja in 2026, a young woman with long braids in a trouser suit. This character was invented for the sake of telling this story. AI-generated.",
+    note:"This character was invented to tell this story. Portrait AI-generated."},
+
+  /* --- opening, map, finish --- */
+  plaza_monument:{file:"plaza-with-monument.png",title:"Bersarinplatz with the monument",hover:"Bersarinplatz with the monument.",
+    short:"Google Street View; AI montage",full:"Google Maps Street View, Bersarinplatz, Berlin. AI montage using the 1914 competition drafts printed in <i>Daheim</i>, June 20, 1914."},
+  plaza_empty:{file:"plaza-today.png",title:"Bersarinplatz today",hover:"Bersarinplatz without the monument.",
+    short:"Google Street View",full:"Google Maps Street View, Bersarinplatz, Berlin."},
+  map:{file:"colonial-map.jpg",title:"Colonial map, 1884",hover:"1880s map of German colonies in the world (excluding the Americas).",
+    short:"Alamy",full:"“Weltkarte: Die Kolonien des Deutschen Reiches, 19. Jahrhundert” [World map: the colonies of the German Empire, 19th century]. Stock photograph. Alamy. Accessed November 9, 2026. <a href=\"https://www.alamy.de/weltkarte-die-kolonien-des-deutschen-reiches-19-jahrhundert-image247767959.html\">https://www.alamy.de/weltkarte-die-kolonien-des-deutschen-reiches-19-jahrhundert-image247767959.html</a>."},
+
+  /* --- Jagodja, 1891 --- */
+  kili:{file:"kilimanjaro-from-moshi.png",title:"Kilimanjaro seen from Moshi",
+    hover:"Jagodja’s home, documented by Carl Peters. The name Kilimanjaro is generally considered to combine the Swahili word “kilima” (mountain) and the Chagga word “njaro” (whiteness or brilliance).",
+    short:"Peters 1895, 131",full:P95},
+  landing:{file:"landing-on-the-coast.png",title:"Landing on the coast",
+    hover:"Peters’ expedition comes ashore on the East African coast in 1889. He documents an adventure, not an invasion.",short:"Peters 1891, 41",full:P91},
+  camp:{file:"expedition-camp.png",title:"Camp of the expedition",
+    hover:"Behind every European “explorer” walked hundreds of African carriers, most of them unnamed.",short:"Peters 1891, 57",full:P91},
+  dar:{file:"dar-es-salaam.png",title:"Dar es Salaam",
+    hover:"Dar es Salaam on the coast became the capital of “German East Africa” in 1891. From here, orders, soldiers and taxes went inland.",short:"Peters 1895, 297",full:P95},
+  force:{file:"using-force.png",title:"Using force to take the land",
+    hover:"The expedition fought its way inland. Illustrations like this turned that violence into thrilling scenes for readers back home.",short:"Peters 1891, 129",full:P91},
+  peters:{file:"carl-peters.png",title:"Carl Peters",
+    hover:"Carl Peters (1856–1918), founder of the Society for German Colonisation and Reichskommissar at Kilimanjaro.",short:"Peters 1891, 21",full:P91},
+  moshi:{file:"moshi-military-station.png",title:"Military station at Moshi",
+    hover:"A German military station below Kilimanjaro. Stations like this one were where colonial rule became physical: walls, soldiers, a flag on a pole.",short:"Peters 1895, 132",full:P95},
+
+  /* --- Rosa Luxemburg, 1914 --- */
+  brunnen:{file:"kolonialbrunnen.jpg",title:"“Der Kolonialbrunnen” (The Colonial Fountain)",
+    hover:"A mock design for a colonial monument. Colonial violence was a widely discussed issue at the time.",
+    short:"Engert, Der Wahre Jacob, 1911",full:"Engert, Max. “Der Kolonialbrunnen” [The colonial fountain]. <i>Der Wahre Jacob</i>, December 2, 1911. Satirical magazine of the Social Democrats."},
+
+  /* --- Hedwig Heyl, 1914 --- */
+  pariser:{file:"pariser-platz-1900.jpg",title:"Pariser Platz, around 1900",
+    hover:"The square in front of the Brandenburg Gate. The Prussian Academy of Arts had its home here, and in 1914 it showed the competition designs for the colonial memorial.",
+    short:"Wikimedia Commons",full:"“File:Pariser Platz, Berlin 1900 (2).jpg.” Wikimedia Commons. Accessed November 9, 2026. <a href=\"https://commons.wikimedia.org/wiki/File:Pariser_Platz,_Berlin_1900_(2).jpg\">https://commons.wikimedia.org/wiki/File:Pariser_Platz,_Berlin_1900_(2).jpg</a>."},
+  hahn:{file:"design-hahn-sattler.jpg",title:"Design by Hermann Hahn and Carl Sattler",
+    hover:"A column with a storming Victoria on top, modelled on Berlin’s Victory Column.",short:"Daheim, June 20, 1914",full:DAHEIM},
+  bruett:{file:"design-bruett.jpg",title:"Design by Adolf Brütt",
+    hover:"A white rider with African figures walking beside him. One newspaper read this draft as a “victory of the white race over the black race.”",short:"Daheim, June 20, 1914",full:DAHEIM},
+  bruett_land:{file:"design-bruett-landscape.jpg",title:"Design by Brütt in its setting",
+    hover:"The same design shown in a landscape view, to give a sense of its scale on a square.",
+    short:"Die Kunstwelt, July 1914, 659",full:"Brütt, Adolf. Design drawing for a colonial war memorial on Baltenplatz (today Bersarinplatz), Berlin. "+KUNSTWELT+" 659. The <i>Norddeutsche Allgemeine Zeitung</i> of June 7, 1914, read this design as a “victory of the white race over the black race.”"},
+  wrba:{file:"design-wrba.jpg",title:"Design by Georg Wrba",
+    hover:"Sculptor Georg Wrba proposed a monumental cube clad in relief carvings. Only one of the four reliefs is known from pictures: Germania triumphantly holding up wreaths of oak leaves, flanked by warships on the open sea.",
+    short:"Die Kunstwelt, July 1914, 664",full:"Wrba, Georg. Design drawing for a colonial war memorial on Baltenplatz (today Bersarinplatz), Berlin. "+KUNSTWELT+" 664."},
+  cauer:{file:"design-cauer.jpg",title:"Design by Ludwig Cauer",
+    hover:"A colossal figure of an unclothed warrior armed with a sword, marked as a soldier of the colonial troops (Schutztruppe) by his hat. The pedestal was to be decorated with reliefs of colonial motifs.",
+    short:"Daheim, June 20, 1914",full:DAHEIM},
+  behn:{file:"design-behn.jpg",title:"The winner: Fritz Behn’s elephant",
+    hover:"The jury chose an African elephant on a pedestal. Critics called it not German enough, and a second round was ordered. Then the war came, and nothing was built in Berlin.",
+    short:"Daheim, June 20, 1914",full:DAHEIM},
+  newspaper:{file:"newspaper-1914.jpg",title:"The press reports the winner",
+    hover:"All the designs share a triumphant gesture; mourning for the dead – naturally, only the white dead – was left out. The artists imagined a classic victory monument. In the age of high imperialism this meant national prestige, and a claim to superiority over “the rest of the world”, built on racism and social Darwinism.",
+    short:"Daheim, June 20, 1914",full:DAHEIM},
+
+  /* --- Agnes von Boemcken, 1932 --- */
+  opening1932:{file:"elephant-opening-1932.jpg",title:"Monument opening ceremony",
+    hover:"Near Bremen’s main station, about ten metres of red brick, the “Reich Colonial Memorial”, are unveiled in July 1932. The monument is based on Behn’s rejected 1914 Berlin design.",
+    short:"Deutschlandfunk Kultur, 2020",full:"“Bremens koloniales Erbe – Gegen die kollektive Amnesie” [Bremen’s colonial heritage: against collective amnesia]. <i>Deutschlandfunk Kultur</i>, November 9, 2020. <a href=\"https://www.deutschlandfunkkultur.de/bremens-koloniales-erbe-gegen-die-kollektive-amnesie-100.html\">https://www.deutschlandfunkkultur.de/bremens-koloniales-erbe-gegen-die-kollektive-amnesie-100.html</a>."},
+  unsere:{file:"elephant-unsere-kolonien.jpg",title:"The original monument",hover:"The monument shortly after it was built.",short:"Weisser 2017",full:WEISSER},
+  reichstag:{file:"reichstag-1914.jpg",title:"The Reichstag, 4 August 1914",hover:"In 1914, the SPD voted with all other parties for the war.",
+    short:"Deutscher Bundestag; photo: pa/akg",full:"Lenz, Kristin. “Vor 100 Jahren: Reichstag billigt Kriegskredite” [100 years ago: the Reichstag approves war credits]. Deutscher Bundestag. Accessed November 10, 2026. <a href=\"https://www.bundestag.de/webarchiv/textarchiv/2014/kw31_reichstagsprotokolle-284830\">https://www.bundestag.de/webarchiv/textarchiv/2014/kw31_reichstagsprotokolle-284830</a>. Photo: pa/akg."},
+  versailles:{file:"versailles-protest-1919.jpg",title:"Demonstrations against the Versailles Treaty, 1919",
+    hover:"Germany lost all its colonies under the Treaty of Versailles (1919). Many Germans felt shamed and betrayed by the end of the First World War.",
+    short:"Der Spiegel, 2017; photo: ullstein bild",full:"“»Absage an die bürgerliche Welt«” [“A rejection of the bourgeois world”]. <i>Der Spiegel Geschichte</i>, May 29, 2017. <a href=\"https://www.spiegel.de/geschichte/absage-an-die-buergerliche-welt-a-062b37ce-0002-0001-0000-000151330203\">https://www.spiegel.de/geschichte/absage-an-die-buergerliche-welt-a-062b37ce-0002-0001-0000-000151330203</a>. Photo: ullstein bild."},
+  antrag:{file:"application-1926.jpg",title:"The application, 1926",
+    hover:"Bremen’s colonial working group applies to build the monument. It takes six more years, and a changing political climate, before it is unveiled.",
+    short:"Klooß 2018",full:"Klooß, Christian. “Was Jan Böhmermann und Blutdiamanten mit dem Denkmal-Tag zu tun haben” [What Jan Böhmermann and blood diamonds have to do with Monument Day]. <i>buten un binnen</i>, 2018. <a href=\"https://www.butenunbinnen.de/nachrichten/tag-des-offenen-denkmals-antikolonialdenkmal-elefant-100.html\">https://www.butenunbinnen.de/nachrichten/tag-des-offenen-denkmals-antikolonialdenkmal-elefant-100.html</a>."},
+  exhibition:{file:"colonial-exhibition-1935.jpg",title:"Colonial exhibition poster, 1935",hover:"Colonial demands peak again under Hitler.",
+    short:"Wegmann, freiburg-postkolonial.de",full:"Wegmann, Heiko. “Grosse Kolonialausstellung” [Great colonial exhibition]. <i>freiburg-postkolonial.de</i>, 2006. <a href=\"https://www.freiburg-postkolonial.de/Seiten/kolonialausstellung.htm\">https://www.freiburg-postkolonial.de/Seiten/kolonialausstellung.htm</a>."},
+
+  /* --- Jagodja, 2026 --- */
+  elephant_today:{file:"elephant-today.jpg",title:"The elephant today",hover:"The elephant statue in Bremen persists to this day.",short:"Weisser 2017",full:WEISSER},
+  charite2011:{file:"charite-2011.png",title:"Charité, Berlin, 2011",
+    hover:"In 2011 the Charité hospital returned skulls of Herero and Nama people to a delegation from Namibia, the first such return from a German collection. Descendants came to meet their ancestors.",
+    short:"Photo: Joachim Zeller, in Diallo and Zeller 2024",full:"Photographs by Joachim Zeller, Maria Baumeister, and private, in "+DZ},
+  charite2014:{file:"charite-2014.png",title:"“Völkermord verjährt nicht”, 2014",
+    hover:"“Genocide has no statute of limitations.” Protest at a further return of human remains.",short:"Photo: Joachim Zeller, in Diallo and Zeller 2024",full:"Photographs by Joachim Zeller, Maria Baumeister, and private, in "+DZ},
+  gendarmen2018:{file:"gendarmenmarkt-2018.png",title:"Gendarmenmarkt, 2018",
+    hover:"The same demand, four years later, outside the ceremony at which more remains were handed back to Namibia.",short:"Photo: Joachim Zeller, in Diallo and Zeller 2024",full:"Photographs by Joachim Zeller, Maria Baumeister, and private, in "+DZ},
+  protest2004:{file:"protest-2004.png",title:"Apology and reparations, 2004",
+    hover:"Protest marking 120 years since the Berlin “Congo Conference” of 1884–85. 2004 was also the hundredth year since the start of the genocide in Namibia.",short:"Photo: Maria Baumeister, in Diallo and Zeller 2024",full:"Photographs by Joachim Zeller, Maria Baumeister, and private, in "+DZ},
+  mohrenstrasse:{file:"mohrenstrasse-sign.jpg",title:"A renamed street",
+    hover:"Street sign of the “Mohrenstraße” (a street named with a racist term for Black people) in Berlin-Mitte, 2014. The renaming was decided in 2020 and carried out in August 2025.",
+    short:"Photo: private, in Diallo and Zeller 2024",full:"Photographs by Joachim Zeller, Maria Baumeister, and private, in "+DZ},
+  decolonize:{file:"decolonize-berlin.png",title:"Decolonize Berlin at a Bismarck monument",
+    hover:"Activists of the Decolonize Berlin alliance. Bismarck hosted the Berlin Conference of 1884–85, where East Africa was taken by Germany.",
+    short:"Diallo and Zeller 2024",full:"Photographs by Joachim Zeller, Maria Baumeister, and private, in "+DZ},
+  anticolonial:{file:"anticolonial-monument.jpg",title:"Renaming: the Anti-Colonial Monument",
+    hover:"“For human rights, against apartheid.” Before Namibia’s independence in 1990, the country was ruled by apartheid South Africa. Activists claimed the elephant for that struggle.",
+    short:"Photograph, Bremen",full:"Photograph of the Anti-Colonial Monument, Bremen. Source to be added."},
+  ohamakari:{file:"ohamakari-plaque.jpg",title:"The Ohamakari plaque",
+    hover:"Ohamakari is the Otjiherero name for the Waterberg. There, in August 1904, German troops defeated the Herero and drove survivors into the Omaheke desert. The plaque remembers the victims of the genocide against Herero and Nama, 1904–1908.",
+    short:"Wikipedia, “Antikolonialdenkmal”",full:WIKI},
+  detail1:{file:"monument-detail-1.jpg",title:"Detail of the monument",
+    hover:"Look closely at the base. Some words were removed, others were added. A monument is never finished.",short:"Wikipedia, “Antikolonialdenkmal”",full:WIKI},
+  detail2:{file:"monument-detail-2.jpg",title:"Another detail",
+    hover:"Monuments keep a record of every generation that argued about them.",short:"Wikipedia, “Antikolonialdenkmal”",full:WIKI},
+  mandela:{file:"nelson-mandela-park.jpg",title:"Nelson-Mandela-Park",
+    hover:"The park around the elephant now carries Nelson Mandela’s name.",short:"Wikipedia, “Antikolonialdenkmal”",full:WIKI}
+};
+
+/* ==========================================================================
+   NOTES (Chicago, numbered as in the essay)
+   ========================================================================== */
+var DZs = "Diallo and Zeller, <i>Berlin – Eine postkoloniale Metropole</i>";
+var NOTES = [null,
+  "“August Bebel Accuses the Colonialist Carl Peters of Two Murders,” German History in Documents and Images, 2026, <a href=\"https://germanhistorydocs.org/en/forging-an-empire-bismarckian-germany-1866-1890/august-bebel-accuses-the-colonialist-carl-peters-of-two-murders-1896\">https://germanhistorydocs.org/en/forging-an-empire-bismarckian-germany-1866-1890/august-bebel-accuses-the-colonialist-carl-peters-of-two-murders-1896</a>.",
+  "Jim Cornelius, “Germany’s Dark Frontiers — The Scandalous Carl Peters,” <i>Frontier Partisans</i>, August 7, 2025, <a href=\"https://frontierpartisans.com/germanys-dark-frontiers-part-i-the-scandalous-carl-peters/\">https://frontierpartisans.com/germanys-dark-frontiers-part-i-the-scandalous-carl-peters/</a>.",
+  "Luise White, <i>Speaking with Vampires: Rumor and History in Colonial Africa</i> (University of California Press, 2000). This is an invented reference to the kind of legends that were created in the early German East African colonial period.",
+  "Carl Peters, <i>Das deutsch-ostafrikanische Schutzgebiet</i> [The German East African protectorate] (1895), 117–39, <a href=\"http://archive.org/details/11612133bsb\">http://archive.org/details/11612133bsb</a>.",
+  "Max Engert, “Der Kolonialbrunnen” [The colonial fountain], <i>Der Wahre Jacob</i>, December 2, 1911.",
+  "Oumar Diallo and Joachim Zeller, <i>Berlin – Eine postkoloniale Metropole: Ein historisch-kritischer Stadtrundgang im Bezirk Mitte</i> [Berlin – a postcolonial metropolis], ed. Farafina e. V. Berlin-Moabit (Metropol-Verlag, 2024), 102–6.",
+  "German History in Documents and Images, “August Bebel Accuses the Colonialist Carl Peters of Two Murders.” Here, I altered the chronology for the purpose of a smoother story. The accusation in the parliament already occurred in 1896.",
+  "Kerstin Hilt, “Deutsche Kolonien: Carl Peters” [German colonies: Carl Peters], <i>Planet Wissen</i>, November 29, 2024, <a href=\"https://www.planet-wissen.de/geschichte/deutsche_geschichte/deutsche_kolonien/pwiewissensfrage588.html\">https://www.planet-wissen.de/geschichte/deutsche_geschichte/deutsche_kolonien/pwiewissensfrage588.html</a>.",
+  "Klaus Epstein, “Erzberger and the German Colonial Scandals, 1905–1910,” <i>The English Historical Review</i> 74, no. 293 (1959): 637–63.",
+  "Winfried Speitkamp, <i>Deutsche Kolonialgeschichte</i> [German colonial history] (Reclam, 2014), 138–45.",
+  DZs + ", 91–101.",
+  DZs + ", 92.",
+  "Ernest Gellner, “Nationalisms and the New World Order,” <i>Bulletin of the American Academy of Arts and Sciences</i> 47, no. 5 (1994): 32, <a href=\"https://doi.org/10.2307/3824450\">https://doi.org/10.2307/3824450</a>.",
+  "Ulrich Roos, <i>Deutsche Außenpolitik: Eine Rekonstruktion der grundlegenden Handlungsregeln</i> [German foreign policy] (Springer-Verlag, 2010), 117.",
+  DZs + ", 91–101.",
+  "John Peter Nettl, <i>Rosa Luxemburg</i> (London: Oxford University Press, 1969), 111, <a href=\"http://archive.org/details/rosaluxemburg0000unse\">http://archive.org/details/rosaluxemburg0000unse</a>.",
+  "Ulrich Biermann and Veronika Bock, “ZeitZeichen: 05.03.1871 – Geburtstag von Rosa Luxemburg” [Rosa Luxemburg’s birthday], WDR 5, February 5, 2021, <a href=\"https://www1.wdr.de/radio/wdr5/sendungen/zeitzeichen/luxemburg-108.html\">https://www1.wdr.de/radio/wdr5/sendungen/zeitzeichen/luxemburg-108.html</a>.",
+  "Elisabeth Heimpel, “Heyl, Hedwig, geborene Crüsemann,” in <i>Neue Deutsche Biographie</i> (Duncker &amp; Humblot, 1972), 9:83–84.",
+  "Heinrich Schnee et al., <i>Das Buch der Deutschen Kolonien</i> [The book of the German colonies] (1937), 185–87, <a href=\"http://archive.org/details/SC038DasBuchDerDeutschenKolonien\">http://archive.org/details/SC038DasBuchDerDeutschenKolonien</a>.",
+  DZs + ", 91–101.",
+  "“Entwürfe für ein Kolonialdenkmal in Berlin” [Designs for a colonial memorial in Berlin], <i>Daheim</i>, June 20, 1914, 2.",
+  DZs + ", 95–96.",
+  "“Karl Körner in Südwestafrika” [Karl Körner in South West Africa], accessed November 8, 2026, <a href=\"https://www.digicult-verbund.de/item/DE-MUS-076111/lido/Album%20252-22\">https://www.digicult-verbund.de/item/DE-MUS-076111/lido/Album 252-22</a>.",
+  "Christiana Brennecke, “Der Deutsch-Koloniale Frauenbund” [The German Colonial Women’s League], <i>Kolonialismus begegnen</i>, June 6, 2023, <a href=\"https://kolonialismus-begegnen.de/geschichten/der-deutsch-koloniale-frauenbund/\">https://kolonialismus-begegnen.de/geschichten/der-deutsch-koloniale-frauenbund/</a>.",
+  "Joachim Zeller, <i>Kolonialdenkmäler und Geschichtsbewußtsein</i> [Colonial monuments and historical consciousness] (IKO-Verlag für Interkulturelle Kommunikation, 2000), 151; “Einweihung des Deutschen Kolonial-Ehrenmals” [Unveiling of the German Colonial Memorial], <i>Bremer Nachrichten</i> (Bremen), July 7, 1932, 3, microfilm collection, Staats- und Universitätsbibliothek Bremen (SuUB).",
+  "“Bremische Bürgerschaft 1931” [Bremen City Parliament, 1931], 29–33, <a href=\"http://brema.suub.uni-bremen.de/brembuerg/2925100\">http://brema.suub.uni-bremen.de/brembuerg/2925100</a>.",
+  "<i>The Empty Grave</i>, documentary, directed by Agnes Lisa Wegner and Cece Mlay (2024), 97 min.",
+  "<i>The Empty Grave</i>.",
+  "“Nachfahren von Mangi Molelia in Berlin” [Descendants of Mangi Molelia in Berlin], Stiftung Preußischer Kulturbesitz, accessed November 10, 2026, <a href=\"https://www.preussischer-kulturbesitz.de/meldung/artikel/2026/02/19/nachfahren-von-mangi-molelia-in-berlin.html\">https://www.preussischer-kulturbesitz.de/meldung/artikel/2026/02/19/nachfahren-von-mangi-molelia-in-berlin.html</a>.",
+  DZs + ", 140–43, 154.",
+  DZs + ", 91–101.",
+  DZs + ", 91–101."
+];
+
+/* ==========================================================================
+   Helpers
+   ========================================================================== */
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+function esc(s){var d=document.createElement("div");d.textContent=s==null?"":s;return d.innerHTML}
+var reduceMotion = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* Load a picture from the images folder, trying other file endings if needed. */
+function loadInto(img, file, done, fail){
+  var base = file.replace(/\.[A-Za-z0-9]+$/, ""), tries = [file], seen = {};
+  seen[file] = 1;
+  EXTS.forEach(function(e){ var f = base + e; if (!seen[f]){ seen[f] = 1; tries.push(f); } });
+  var i = 0;
+  img.onerror = function(){ i++; if (i < tries.length) img.src = IMG_DIR + encodeURI(tries[i]); else if (fail) fail(); };
+  img.onload = function(){ if (done) done(); };
+  img.src = IMG_DIR + encodeURI(tries[0]);
+}
+
+/* ==========================================================================
+   Pictures in the story
+   ========================================================================== */
+var uid = 0;
+function buildFigure(fig){
+  var key = fig.dataset.slot, s = SLOTS[key]; if (!s) return;
+  var id = "d" + (++uid);
+  fig.innerHTML =
+    '<div class="pic__frame" tabindex="0" data-tip="'+key+'" aria-describedby="'+id+'"></div>' +
+    '<figcaption><span class="pic__title">'+esc(s.title)+'</span>' +
+    '<span class="pic__credit">'+esc(s.short)+'</span>' +
+    '<button type="button" class="pic__more" aria-expanded="false" aria-controls="'+id+'">About this picture</button>' +
+    '<span class="pic__desc" id="'+id+'">'+esc(s.hover)+'</span></figcaption>';
+  var frame = $(".pic__frame", fig), img = document.createElement("img");
+  img.alt = s.title + ". " + (s.hover || "");
+  img.loading = "lazy"; img.decoding = "async";
+  frame.appendChild(img);
+  loadInto(img, s.file, null, function(){
+    img.remove();
+    frame.insertAdjacentHTML("beforeend", '<span class="pic__ph">'+esc(s.title)+'<br>'+esc(IMG_DIR + s.file)+'</span>');
+  });
+  $(".pic__more", fig).addEventListener("click", function(){
+    var open = !fig.classList.contains("is-open");
+    fig.classList.toggle("is-open", open); this.setAttribute("aria-expanded", String(open));
+    this.textContent = open ? "Hide" : "About this picture";
+  });
+}
+$$("figure.pic[data-slot]").forEach(buildFigure);
+
+/* Character portraits */
+$$("[data-char]").forEach(function(box){
+  var s = SLOTS[box.dataset.char], img = document.createElement("img");
+  img.alt = s.alt; box.appendChild(img);
+  loadInto(img, s.file, null, function(){ img.remove(); box.innerHTML = '<span class="ph">'+esc(s.title)+'</span>'; });
+});
+$$("[data-ainote]").forEach(function(p){ p.textContent = SLOTS[p.dataset.ainote].note; });
+
+/* Full-page stage pictures */
+$$("img[data-stage]").forEach(function(img){
+  var s = SLOTS[img.dataset.stage];
+  loadInto(img, s.file, function(){
+    img.hidden = false;
+    var ph = $("[data-ph]", img.parentNode); if (ph) ph.hidden = true;
+    if (img.id === "mapImg") mapLayout();
+  });
+});
+
+/* Image credits, in order of appearance, without repeats */
+(function(){
+  var order = [], seen = {};
+  ["plaza_monument","plaza_empty","map"].concat($$("figure.pic[data-slot]").map(function(f){return f.dataset.slot;})).forEach(function(k){
+    var f = SLOTS[k].full; if (!seen[f]){ seen[f] = 1; order.push({k:k,f:f}); }
+  });
+  $("#credits").innerHTML = order.map(function(o){
+    var used = Object.keys(SLOTS).filter(function(k){ return SLOTS[k].full === o.f; }).map(function(k){ return SLOTS[k].title; });
+    return "<li>" + o.f + " <span class=\"back\">(" + used.map(esc).join("; ") + ")</span></li>";
+  }).join("");
+})();
+
+/* Notes */
+$("#notes").innerHTML = NOTES.slice(1).map(function(n, i){
+  var k = i + 1;
+  return '<li id="n'+k+'">' + n + ' <a class="back" href="#r'+k+'" aria-label="Back to the text for note '+k+'">Back to text</a></li>';
+}).join("");
+
+/* ==========================================================================
+   Hover text that follows the cursor (pictures, notes, timeline ticks)
+   ========================================================================== */
+var tip = $("#tip");
+function tipHTML(el){
+  if (el.dataset.tip){
+    var s = SLOTS[el.dataset.tip];
+    return "<strong>"+esc(s.title)+"</strong><p>"+esc(s.hover)+"</p><p class=\"src\">"+esc(s.short)+"</p>";
+  }
+  if (el.dataset.note) return "<p><b>"+el.dataset.note+".</b> "+NOTES[+el.dataset.note]+"</p>";
+  if (el.dataset.label) return "<strong>"+esc(el.dataset.label)+"</strong>";
+  return "";
+}
+function placeTip(x, y){
+  var w = tip.offsetWidth, h = tip.offsetHeight, vw = innerWidth, vh = innerHeight;
+  var left = x + 18, top = y + 20;
+  if (left + w > vw - 8) left = Math.max(8, x - w - 18);
+  if (top + h > vh - 8) top = Math.max(8, y - h - 14);
+  tip.style.transform = "translate(" + left + "px," + top + "px)";
+}
+function showTip(el, x, y){ tip.innerHTML = tipHTML(el); tip.classList.add("on"); placeTip(x, y); }
+function hideTip(){ tip.classList.remove("on"); }
+var tipTargets = "[data-tip],[data-note],.tick";
+document.addEventListener("mousemove", function(e){
+  var el = e.target.closest && e.target.closest(tipTargets);
+  if (!el || e.target.closest(".stage__card,.maplabel")){ hideTip(); return; }
+  if (!tip.classList.contains("on") || tip._el !== el){ tip._el = el; showTip(el, e.clientX, e.clientY); }
+  else placeTip(e.clientX, e.clientY);
+});
+document.addEventListener("focusin", function(e){
+  var el = e.target.closest && e.target.closest(tipTargets);
+  if (!el) return hideTip();
+  var r = el.getBoundingClientRect(); tip._el = el; showTip(el, r.left, r.bottom - 10);
+});
+document.addEventListener("focusout", hideTip);
+window.addEventListener("scroll", function(){ if (tip._el && !tip._el.matches(":hover")) hideTip(); }, {passive:true});
+$$(".fn a").forEach(function(a){ a.dataset.note = a.getAttribute("href").slice(2); a.setAttribute("aria-label", "Note " + a.dataset.note); });
+
+/* ==========================================================================
+   Title: "Monument" gives way to "Nation"
+   ========================================================================== */
+(function(){
+  var sw = $("#swap"), introVisible = true;
+  function set(n){ sw.classList.toggle("is-nation", n); }
+  function run(seq, i){ if (i >= seq.length) return; set(seq[i][0]); setTimeout(function(){ run(seq, i + 1); }, seq[i][1]); }
+  setTimeout(function(){
+    if (reduceMotion){ set(true); return; }
+    run([[true,140],[false,90],[true,260],[false,60],[true,0]], 0);
+    (function idle(){
+      setTimeout(function(){
+        if (introVisible && lastStep === 0) run([[false,70],[true,110],[false,50],[true,0]], 0);
+        idle();
+      }, 7000 + Math.random() * 9000);
+    })();
+  }, 3200);
+  new IntersectionObserver(function(es){ introVisible = es[0].isIntersecting; }).observe($("#intro"));
+})();
+
+/* ==========================================================================
+   Scroll-driven scenes
+   ========================================================================== */
+function progressOf(el){
+  var r = el.getBoundingClientRect(), total = el.offsetHeight - (innerHeight - barH);
+  return Math.min(1, Math.max(0, -r.top / (total || 1)));
+}
+var lastStep = 0, barH = 52;
+function measureBar(){
+  barH = $(".timeline-header").offsetHeight;
+  document.documentElement.style.setProperty("--bar-h", barH + "px");
+}
+function introScene(){
+  var p = progressOf($("#intro"));
+  var step = p < .08 ? 0 : p < .25 ? 1 : p < .43 ? 2 : p < .61 ? 3 : p < .8 ? 4 : 5;
+  if (step === lastStep && introScene.done) return;
+  introScene.done = true;
+  $$("[data-step]").forEach(function(c){ c.classList.toggle("on", +c.dataset.step === step); });
+  $("#monumentLayer").style.opacity = step <= 1 ? 1 : step === 5 ? .5 : 0;
+  $("#scrim").style.opacity = step === 0 ? 1 : .35;
+  lastStep = step;
+}
+var lastO = -1;
+function outroScene(){
+  var p = progressOf($("#outro"));
+  var s = p < .34 ? 1 : p < .68 ? 2 : 3;
+  if (s === lastO) return; lastO = s;
+  $$("[data-ostep]").forEach(function(c){ c.classList.toggle("on", +c.dataset.ostep === s); });
+}
+
+/* The map: a slow flight from Germany to East Africa */
+var mapNat = null;
+function mapLayout(){
+  var img = $("#mapImg"); if (img.hidden || !img.naturalWidth) return;
+  mapNat = {w: img.naturalWidth, h: img.naturalHeight};
+  img.style.width = mapNat.w + "px"; img.style.height = mapNat.h + "px";
+  mapScene();
+}
+function ease(t){ return t < .5 ? 2*t*t : 1 - Math.pow(-2*t + 2, 2) / 2; }
+function mapScene(){
+  if (!mapNat) return;
+  var stage = $("#mapStage"), W = stage.clientWidth, H = stage.clientHeight;
+  var p = progressOf($("#mapride")), t = ease(Math.min(1, Math.max(0, (p - .08) / .8)));
+  var fx = MAP_FROM.x + (MAP_TO.x - MAP_FROM.x) * t, fy = MAP_FROM.y + (MAP_TO.y - MAP_FROM.y) * t;
+  var z = MAP_FROM.zoom + (MAP_TO.zoom - MAP_FROM.zoom) * t;
+  var s = Math.max(W / mapNat.w, H / mapNat.h) * Math.max(1, z);
+  var tx = W / 2 - fx * mapNat.w * s, ty = H / 2 - fy * mapNat.h * s;
+  tx = Math.min(0, Math.max(W - mapNat.w * s, tx)); ty = Math.min(0, Math.max(H - mapNat.h * s, ty));
+  $("#mapImg").style.transform = "translate3d(" + tx + "px," + ty + "px,0) scale(" + s + ")";
+  mapScene.s = s; mapScene.tx = tx; mapScene.ty = ty;
+  var late = t > .62;
+  if (mapScene.late !== late){
+    mapScene.late = late;
+    $("#mapYr").textContent = late ? "1891" : "Germany";
+    $("#mapTxt").textContent = late ? "Kilimanjaro, in what Germany now calls “German East Africa”." : "A late-comer in the race for colonies.";
+  }
+}
+/* ?mapdebug: click the map to read the x and y of any point */
+if (/[?&]mapdebug/.test(location.search)){
+  $("#mapStage").classList.add("debug");
+  $("#mapStage").addEventListener("click", function(e){
+    if (!mapNat) return;
+    var r = this.getBoundingClientRect();
+    var x = ((e.clientX - r.left - mapScene.tx) / mapScene.s) / mapNat.w, y = ((e.clientY - r.top - mapScene.ty) / mapScene.s) / mapNat.h;
+    $("#mapDebug").textContent = "x: " + x.toFixed(3) + "   y: " + y.toFixed(3);
+  });
+}
+
+/* Timeline bar: progress, date stamp, chapter ticks */
+var chapters = $$("[data-chapter]");
+function placeTicks(){
+  var max = document.documentElement.scrollHeight - innerHeight, track = $("#track");
+  $$(".tick", track).forEach(function(t){ t.remove(); });
+  chapters.forEach(function(ch){
+    var a = document.createElement("a");
+    a.className = "tick"; a.href = "#" + ch.id; a.dataset.label = ch.dataset.label;
+    a.setAttribute("aria-label", ch.dataset.label);
+    a.style.left = Math.min(100, 100 * (ch.offsetTop - barH) / max) + "%";
+    track.appendChild(a);
+  });
+}
+function onScroll(){
+  var max = document.documentElement.scrollHeight - innerHeight;
+  $("#progress").style.width = (100 * scrollY / (max || 1)) + "%";
+  introScene(); mapScene(); outroScene();
+}
+var raf = 0;
+window.addEventListener("scroll", function(){ if (!raf) raf = requestAnimationFrame(function(){ raf = 0; onScroll(); }); }, {passive:true});
+window.addEventListener("resize", function(){ measureBar(); mapLayout(); placeTicks(); onScroll(); });
+if (window.ResizeObserver){ var rt; new ResizeObserver(function(){ clearTimeout(rt); rt = setTimeout(placeTicks, 200); }).observe(document.body); }
+
+var dateObs = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if (e.isIntersecting) $("#dateStamp").textContent = e.target.dataset.date; });
+}, {rootMargin:"-45% 0px -50% 0px"});
+$$("[data-date]").forEach(function(el){ dateObs.observe(el); });
+
+/* Dark moments */
+var dark = new Set();
+var darkObs = new IntersectionObserver(function(es){
+  es.forEach(function(e){ e.isIntersecting ? dark.add(e.target) : dark.delete(e.target); });
+  document.documentElement.classList.toggle("dark-moment", dark.size > 0);
+}, {rootMargin:"-40% 0px -40% 0px"});
+$$("[data-dark]").forEach(function(el){ darkObs.observe(el); });
+
+/* Rosa stays unnamed until she introduces herself */
+var revealObs = new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    var ch = e.target.closest(".chapter");
+    if (e.isIntersecting) ch.classList.remove("hidden-speaker");
+    else if (e.boundingClientRect.top > 0) ch.classList.add("hidden-speaker");
+  });
+}, {rootMargin:"0px 0px -35% 0px"});
+$$("[data-reveal]").forEach(function(el){ revealObs.observe(el); });
+
+measureBar(); placeTicks(); onScroll();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ measureBar(); placeTicks(); onScroll(); });
+</script>
+</body>
+</html>
