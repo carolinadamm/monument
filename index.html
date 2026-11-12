@@ -585,7 +585,7 @@ button{font:inherit;color:inherit}
 </section>
 
 <!-- ============ FINISH: BACK ON THE EMPTY PLAZA ============ -->
-<section class="ride ride--outro" id="outro" data-date="Bersarinplatz, 2026" aria-label="Back on Bersarinplatz">
+<section class="ride ride--outro" id="outro" data-date="Bersarinplatz, 2026" data-label="Back on Bersarinplatz, 2026" aria-label="Back on Bersarinplatz">
   <figure class="stage" data-tip="plaza_empty">
     <div class="stage__ph" data-ph>Bersarinplatz, today</div>
     <img class="stage__img" data-stage="plaza_empty" alt="" hidden>
@@ -608,7 +608,7 @@ button{font:inherit;color:inherit}
 </section>
 
 <!-- ============ NOTES & REFERENCES ============ -->
-<section class="backmatter" id="sources" data-date="Sources" aria-label="Notes and references">
+<section class="backmatter" id="sources" data-date="References" data-label="Notes and references" aria-label="Notes and references">
   <h2>Notes</h2>
   <ol id="notes"></ol>
 
@@ -956,13 +956,18 @@ $$("[data-char]").forEach(function(box){
 /* Centre each figure in its column; a figure wider than the column
    overflows towards the screen edge, never over the text. */
 function placePortraits(){
+  var mobile = window.innerWidth <= 820;
   $$(".portrait img, .outro-figure img").forEach(function(img){
-    if (!img.naturalWidth || window.innerWidth <= 820 && img.closest(".portrait")) { img.style.left = ""; return; }
-    var col = img.parentNode, cw = col.clientWidth, w = img.offsetWidth;
-    var over = Math.max(0, (w - cw) / 2);
-    img.style.left = ((cw - w) / 2) + "px";          /* centred on the paper slip */
     var holder = img.closest(".chapter") || img.closest(".ride--outro");
-    if (holder) holder.style.setProperty("--push", Math.ceil(over) + "px");
+    if (!img.naturalWidth || (mobile && img.closest(".portrait"))){
+      img.style.left = ""; holder.style.removeProperty("--pw"); holder.style.removeProperty("--push"); return;
+    }
+    /* the column is as wide as the figure (within limits), so the text sits right beside her */
+    var w = img.offsetWidth;
+    var col = Math.round(Math.max(200, Math.min(w, window.innerWidth * 0.42, 600)));
+    holder.style.setProperty("--pw", col + "px");
+    holder.style.setProperty("--push", Math.ceil(Math.max(0, (w - col) / 2)) + "px");
+    img.style.left = ((col - w) / 2) + "px";          /* centred on the paper slip */
   });
 }
 $$("img[data-stage]").forEach(function(img){
@@ -1248,10 +1253,11 @@ if (/[?&]mapdebug/.test(location.search)){
 
 /* Timeline bar */
 var chapters = $$("[data-chapter]");
+var marks = chapters.concat([$("#outro"), $("#sources")]);
 function placeTicks(){
   var max = document.documentElement.scrollHeight - innerHeight, track = $("#track");
   $$(".tick", track).forEach(function(t){ t.remove(); });
-  chapters.forEach(function(ch){
+  marks.forEach(function(ch){
     var a = document.createElement("a");
     a.className = "tick"; a.href = "#" + ch.id; a.dataset.label = ch.dataset.label;
     a.setAttribute("aria-label", ch.dataset.label);
