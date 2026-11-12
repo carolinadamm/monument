@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Complications in Building a Nation: Five Delineations</title>
 <meta name="description" content="A scrolling history walk: five women, one nation, and the German Colonial War Memorial that was never built on Berlin’s Bersarinplatz.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231C1A17'/%3E%3Crect x='21' y='9' width='22' height='22' fill='none' stroke='%23CFC9C0' stroke-width='2.5' stroke-dasharray='4 3'/%3E%3Crect x='17' y='34' width='30' height='7' fill='%23CFC9C0'/%3E%3Crect x='13' y='41' width='38' height='7' fill='%23A8A299'/%3E%3Crect x='8' y='48' width='48' height='7' fill='%23CFC9C0'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231C1A17'/%3E%3Cg fill='%23D8D2C8'%3E%3Cellipse cx='37' cy='30' rx='17' ry='12'/%3E%3Ccircle cx='18' cy='25' r='9.5'/%3E%3Crect x='24' y='34' width='7' height='16'/%3E%3Crect x='33' y='36' width='6' height='14'/%3E%3Crect x='40' y='36' width='6' height='14'/%3E%3Crect x='47' y='33' width='6.5' height='17'/%3E%3Cpath d='M10 27 C7 33 6 39 8 45 C9 48 12 49 14 47 C12 45 11 42 12 38 C13 34 15 31 16 30 Z'/%3E%3Cpath d='M53 26 C57 28 58 32 57 37' fill='none' stroke='%23D8D2C8' stroke-width='2'/%3E%3C/g%3E%3Cpath d='M22 19 C30 17 32 26 29 33 C26 36 22 34 21 30 Z' fill='%23A8A299'/%3E%3Ccircle cx='14.5' cy='23' r='1.4' fill='%231C1A17'/%3E%3Cpath d='M13 32 C11 35 10 37 9 37' fill='none' stroke='%23F4EFEA' stroke-width='1.6' stroke-linecap='round'/%3E%3Crect x='6' y='50' width='52' height='4' fill='%238A857E'/%3E%3Crect x='9' y='54' width='46' height='4' fill='%236E6A65'/%3E%3C/svg%3E">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
 /* ==========================================================================
@@ -19,11 +22,11 @@
   --rule:#6E6A65;                    /* grey lines (4.8:1) */
   --accent-interactive:#004D80; --focus-ring:#004D80; --border-color:#1C1A17;
   --font-heading:Georgia,'Times New Roman',serif;
-  --font-body:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  --font-body:'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   --font-size-base:1.125rem; --line-height-base:1.65; --line-height-heading:1.2;
   --min-tap-target:48px;
   --bar-h:52px; --stage-h:calc(100vh - 52px);
-  --pw:clamp(230px,27vw,440px);      /* width of the protagonist column */
+  --pw:clamp(250px,29vw,480px);      /* width of the protagonist column */
   --outer:clamp(1rem,4.5vw,4.5rem);  /* page margin on the far side */
   --inner:clamp(1rem,3vw,3rem);      /* gap next to the protagonist */
   color-scheme:light;
@@ -34,7 +37,8 @@
   --accent-interactive:#64B5F6; --focus-ring:#FFD700; --border-color:#F4EFEA;
 }
 *,*::before,*::after{box-sizing:border-box;border-radius:0!important}
-html{font-size:100%;-webkit-text-size-adjust:100%;scroll-padding-top:var(--bar-h)}
+html{font-size:100%;-webkit-text-size-adjust:100%;scroll-padding-top:var(--bar-h);overflow-x:clip}
+body{overflow-x:clip}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
@@ -80,7 +84,7 @@ button{font:inherit;color:inherit}
 .ride{position:relative}
 .ride--intro{height:600vh} .ride--map{height:200vh} .ride--outro{height:300vh}
 .stage{position:sticky;top:var(--bar-h);height:var(--stage-h);overflow:hidden;background:#2b2724;margin:0}
-.stage__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.stage__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%;max-width:none}
 .stage__ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#CFC6B6;text-align:center;padding:2rem}
 .layer-monument{transition:opacity .9s ease}
 .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.05) 45%,rgba(0,0,0,.5));pointer-events:none;transition:opacity .6s}
@@ -108,46 +112,46 @@ button{font:inherit;color:inherit}
 .maplabel{position:absolute;left:clamp(1rem,5vw,4rem);bottom:clamp(1.25rem,7vh,5rem);max-width:min(30rem,calc(100% - 2rem))}
 .maplabel .yr{font-family:var(--font-heading);font-size:clamp(2.6rem,7vw,4.4rem);line-height:1;margin:0 0 .35rem;color:#3E3A35}
 .maplabel p{margin:0}
+.outro-figure{position:absolute;left:0;top:0;bottom:0;width:var(--pw);clip-path:inset(0 -100vw 0 -100vw);z-index:1;pointer-events:none}
+.outro-figure img{position:absolute;top:19%;left:0;height:144%;width:auto;max-width:none}
+.ride--outro .stage__card{left:calc(var(--pw) + var(--inner));z-index:2}
 .mapdebug{position:absolute;right:1rem;top:1rem;background:#1C1A17;color:#F4EFEA;padding:.6rem .8rem;font-size:.9rem;display:none}
-.debug .mapdebug{display:block}
+.debug .outro-figure{position:absolute;left:0;top:0;bottom:0;width:var(--pw);clip-path:inset(0 -100vw 0 -100vw);z-index:1;pointer-events:none}
+.outro-figure img{position:absolute;top:19%;left:0;height:144%;width:auto;max-width:none}
+.ride--outro .stage__card{left:calc(var(--pw) + var(--inner));z-index:2}
+.mapdebug{display:block}
 
 /* ---------- Chapters: protagonist on alternating sides ---------- */
 .chapter{display:grid;grid-template-columns:var(--pw) minmax(0,1fr);padding-top:3rem}
 .chapter.side-right{grid-template-columns:minmax(0,1fr) var(--pw)}
 .chapter.side-right .speaker{order:2}
 .speaker{position:relative}
-.speaker__in{position:sticky;top:var(--bar-h);height:var(--stage-h);overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
-.portrait{display:flex;justify-content:center;align-items:flex-end;height:100%;width:100%;cursor:help}
-.portrait img{height:96%;width:auto;max-width:none;margin-bottom:-14%;object-fit:contain;
-  opacity:0;transition:opacity .9s ease,transform .9s ease,filter .9s ease}
-.side-left .portrait img{transform:translateX(-36px)}
-.side-right .portrait img{transform:translateX(36px)}
-.chapter.in .portrait img{opacity:1;transform:none}
-.portrait .ph{align-self:center;color:var(--text-muted);text-align:center;font-family:var(--font-heading);font-style:italic}
-:root.dark-moment .portrait img{filter:invert(.9) hue-rotate(180deg)}
-.hidden-speaker .portrait img{filter:brightness(0)!important;opacity:.28!important}
-/* the plaque */
-.plaque{position:absolute;left:50%;bottom:clamp(1rem,5vh,3rem);transform:translateX(-50%);width:min(88%,290px);z-index:2;
-  padding:.95rem 1.2rem .85rem;text-align:center;color:#F1ECE4;font-family:var(--font-heading);text-shadow:0 1px 0 rgba(0,0,0,.6);
-  background:
-    radial-gradient(circle at 9px 9px,#C9C3B9 0 2px,#2A2724 2.6px,transparent 3.4px),
-    radial-gradient(circle at calc(100% - 9px) 9px,#C9C3B9 0 2px,#2A2724 2.6px,transparent 3.4px),
-    radial-gradient(circle at 9px calc(100% - 9px),#C9C3B9 0 2px,#2A2724 2.6px,transparent 3.4px),
-    radial-gradient(circle at calc(100% - 9px) calc(100% - 9px),#C9C3B9 0 2px,#2A2724 2.6px,transparent 3.4px),
-    linear-gradient(160deg,#6E6962 0%,#4B4742 48%,#3A3733 100%);
-  border:1px solid #23211F;box-shadow:inset 0 0 0 4px rgba(0,0,0,.18),inset 0 0 0 5px rgba(255,255,255,.18),0 8px 18px rgba(0,0,0,.35)}
-.plaque p{margin:0}
-.plaque__name{font-size:1.35rem;line-height:1.2;font-variant:small-caps;letter-spacing:.05em}
-.plaque__role{font-size:.85rem;line-height:1.35;margin-top:.3rem!important;color:#E4DED4}
-.plaque__when{font-size:.9rem;font-style:italic;margin-top:.35rem!important;padding-top:.35rem;border-top:1px solid rgba(255,255,255,.28)}
-.plaque__ai{font-family:var(--font-body);font-size:.7rem;letter-spacing:.04em;color:#DCD6CC;margin-top:.35rem!important}
-.plaque .unknown{display:none}
-.hidden-speaker .plaque .known,.hidden-speaker .plaque__ai{display:none}
-.hidden-speaker .plaque .unknown{display:block}
+.speaker__in{position:sticky;top:var(--bar-h);height:var(--stage-h);clip-path:inset(0 -100vw 0 -100vw)}
+.portrait{position:absolute;inset:0}
+/* 1.5 × the earlier size; placed so the head falls on the upper third line */
+.portrait img{position:absolute;top:19%;left:0;height:144%;width:auto;max-width:none;cursor:help;
+  opacity:0;transition:opacity .9s ease,translate .9s ease,filter .9s ease}
+.side-left .portrait img{translate:-40px 0}
+.side-right .portrait img{translate:40px 0}
+.chapter.in .portrait img{opacity:1;translate:0 0}
+.portrait .ph{position:absolute;top:40%;left:0;right:0;color:var(--text-muted);text-align:center;font-family:var(--font-heading);font-style:italic}
+.hidden-speaker .portrait img{filter:brightness(0);opacity:.28!important}
+/* the paper slip with the name */
+.slip{position:absolute;left:50%;bottom:clamp(1rem,5vh,3rem);transform:translateX(-50%) rotate(-1.2deg);width:min(86%,290px);z-index:2;
+  padding:1rem 1.2rem .9rem;text-align:center;font-family:var(--font-heading)}
+.side-right .slip{transform:translateX(-50%) rotate(1.2deg)}
+.slip p{margin:0}
+.slip__name{font-size:1.35rem;line-height:1.2}
+.slip__role{font-family:var(--font-body);font-size:.85rem;line-height:1.35;margin-top:.3rem!important;color:#3E3A35}
+.slip__when{font-style:italic;font-size:.95rem;margin-top:.35rem!important}
+.slip__ai{font-family:var(--font-body);font-size:.72rem;color:#3E3A35;margin-top:.35rem!important}
+.slip .unknown{display:none}
+.hidden-speaker .slip .known,.hidden-speaker .slip__ai{display:none}
+.hidden-speaker .slip .unknown{display:block}
 
 .speech{min-width:0;padding:0 var(--outer) 4rem var(--inner)}
 .side-right .speech{padding:0 var(--inner) 4rem var(--outer)}
-.speech p,.speech blockquote,.chapter__head{max-width:62ch}
+.speech p,.speech blockquote,.chapter__head{max-width:min(42rem,100%)}
 .chapter__head{margin:0 0 2.5rem;padding-bottom:.6rem;display:flex;align-items:baseline;gap:1.1rem;flex-wrap:wrap;border-bottom:2px solid var(--rule)}
 .chapter__year{font-size:clamp(4rem,11vw,8.5rem);line-height:.9;color:var(--accent-primary)}
 .chapter__place{font-size:clamp(1.3rem,2.4vw,1.85rem)}
@@ -160,12 +164,21 @@ button{font:inherit;color:inherit}
 .fn a{text-decoration:none;padding:0 .12em}
 .fn a:hover,.fn a:focus-visible{text-decoration:underline}
 
-/* ---------- Pictures: large, frameless, bleeding to the far edge ---------- */
+/* ---------- Pictures: large and frameless ---------- */
 .pic{margin:3rem 0}
 .side-left .pic{margin-right:calc(-1 * var(--outer))}
-.side-right .pic{margin-left:calc(-1 * var(--outer))}
 .side-left .pic figcaption{padding-right:var(--outer)}
-.side-right .pic figcaption{padding-left:var(--outer)}
+.side-right .speech p,.side-right .speech blockquote,.side-right .chapter__head{margin-left:auto}
+.side-right .pic{display:table;margin-left:auto}
+.side-right .pic figcaption{display:table-caption;caption-side:bottom}
+.pic--big,.side-right .pic--big{display:block;width:100%}
+.pic--big .pic__frame{width:100%}
+.pic--big figcaption,.side-right .pic--big figcaption{display:block}
+.pic--big .pic__frame img{width:100%;max-height:none}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:3rem 0}
+.pair .pic,.side-right .pair .pic{display:block;margin:0;width:auto}
+.pair .pic figcaption,.side-right .pair .pic figcaption{display:block}
+.pair .pic__frame img{width:100%;max-height:60vh;object-fit:contain;object-position:left top}
 .pic__frame{position:relative;display:block;width:fit-content;max-width:100%;cursor:help}
 .pic__frame img{width:auto;max-width:100%;max-height:86vh;height:auto}
 .pic__ph{display:flex;align-items:center;justify-content:center;width:min(100%,900px);aspect-ratio:4/3;padding:1.5rem;text-align:center;color:var(--text-muted);border:2px dashed var(--rule)}
@@ -187,15 +200,21 @@ button{font:inherit;color:inherit}
   .chapter.side-right .speaker{order:0}
   .speaker{position:sticky;top:var(--bar-h);z-index:20;background:var(--bg-primary);border-bottom:2px solid var(--rule);transition:background-color .6s}
   .speaker__in{position:static;height:auto;overflow:visible;justify-content:flex-start;align-items:center;gap:.8rem;padding:.4rem 1rem}
-  .portrait{width:70px;height:92px;flex:none;overflow:hidden;align-items:flex-start}
-  .portrait img{height:auto;width:100%;margin:0;transform:none!important}
-  .plaque{position:static;transform:none;width:auto;flex:1;padding:.5rem .8rem;text-align:left}
-  .plaque__name{font-size:1.1rem}
-  .plaque__role,.plaque__ai{display:none}
-  .plaque__when{border:0;padding:0;margin-top:.1rem!important}
+  .speaker__in{clip-path:none}
+  .portrait{position:relative;inset:auto;width:70px;height:92px;flex:none;overflow:hidden}
+  .portrait img{position:static;height:auto!important;width:100%!important;left:auto!important;top:auto;translate:none!important}
+  .slip,.side-right .slip{position:static;transform:none;width:auto;flex:1;padding:.6rem .9rem;text-align:left}
+  .slip__name{font-size:1.1rem}
+  .slip__role,.slip__ai{display:none}
+  .slip__when{margin-top:.1rem!important}
   .speech,.side-right .speech{padding:0 1rem 3rem}
-  .side-left .pic,.side-right .pic{margin-left:-1rem;margin-right:-1rem}
-  .side-left .pic figcaption,.side-right .pic figcaption{padding:0 1rem}
+  .side-left .pic,.side-right .pic{display:block;margin-left:-1rem;margin-right:-1rem}
+  .side-left .pic figcaption,.side-right .pic figcaption{display:block;padding:0 1rem}
+  .side-right .speech p,.side-right .speech blockquote,.side-right .chapter__head{margin-left:0}
+  .pair{grid-template-columns:1fr}
+  .pair .pic,.side-right .pair .pic{margin:0 -1rem}
+  .outro-figure{display:none}
+  .ride--outro .stage__card{left:clamp(1rem,5vw,4rem)}
 }
 
 /* hover text that follows the cursor */
@@ -234,7 +253,7 @@ button{font:inherit;color:inherit}
 
 <header class="timeline-header">
   <div class="timeline-header__content">
-    <p class="timeline-header__date" id="dateStamp" aria-live="polite">Bersarinplatz, today</p>
+    <p class="timeline-header__date" id="dateStamp" aria-live="polite">Bersarinplatz, 2026</p>
     <nav class="timeline-header__progress-track" id="track" aria-label="The five voices">
       <div class="timeline-header__progress-bar" id="progress"></div>
     </nav>
@@ -244,7 +263,7 @@ button{font:inherit;color:inherit}
 <main>
 
 <!-- ============ OPENING ============ -->
-<section class="ride ride--intro" id="intro" data-date="Bersarinplatz, today" aria-labelledby="siteTitle">
+<section class="ride ride--intro" id="intro" data-date="Bersarinplatz, 2026" aria-labelledby="siteTitle">
   <figure class="stage" id="introStage" data-tip="plaza_monument">
     <div class="stage__ph" data-ph>Bersarinplatz, Berlin-Friedrichshain</div>
     <img class="stage__img" data-stage="plaza_empty" alt="" hidden>
@@ -287,14 +306,14 @@ button{font:inherit;color:inherit}
 </section>
 
 <!-- ============ THE MAP (shown once) ============ -->
-<section class="ride ride--map" id="mapride" data-date="German Empire, 1880s" aria-label="A colonial map">
+<section class="ride ride--map" id="mapride" data-date="Deutsches Reich, 1884" aria-label="A colonial map">
   <figure class="stage" id="mapStage" data-tip="map">
     <div class="stage__ph" data-ph>Colonial map</div>
     <img id="mapImg" data-stage="map" alt="Map of the German colonies in the 1880s." hidden>
     <figcaption class="visually-hidden">Colonial map, 1884. 1880s map of German colonies in the world (excluding the Americas). The view travels slowly from Germany to East Africa.</figcaption>
     <div class="maplabel torn" aria-live="polite">
-      <p class="yr" id="mapYr">Germany</p>
-      <p id="mapTxt">A late-comer in the race for colonies.</p>
+      <p class="yr" id="mapYr">Deutsches Reich</p>
+      <p id="mapTxt">The German Empire, a late-comer in the race for colonies.</p>
     </div>
     <div class="mapdebug" id="mapDebug">Click the map to read a point</div>
   </figure>
@@ -305,16 +324,16 @@ button{font:inherit;color:inherit}
   <aside class="speaker" aria-label="Who is speaking">
     <div class="speaker__in">
       <div class="portrait" data-char="char_jagodja1891" data-tip="char_jagodja1891"></div>
-      <div class="plaque">
-        <p class="plaque__name">Jagodja</p>
-        <p class="plaque__role">A woman of Mamba, sister of the mangi Manamia</p>
-        <p class="plaque__when">Kilimanjaro, 1891</p>
-        <p class="plaque__ai">AI-generated portrait</p>
+      <div class="slip torn">
+        <p class="slip__name">Jagodja</p>
+        <p class="slip__role">A woman of Mamba, sister of the mangi Manamia</p>
+        <p class="slip__when">Kilimanjaro, 1891</p>
+        <p class="slip__ai">AI-generated portrait</p>
       </div>
     </div>
   </aside>
   <div class="speech">
-    <h2 class="chapter__head"><span class="chapter__year">1891</span><span class="chapter__place">Jagodja, on the slopes of Kilimanjaro</span></h2>
+    <h2 class="chapter__head"><span class="chapter__year">1891</span><span class="chapter__place">Kilimanjaro</span></h2>
     <div class="beat">
       <p class="lead">My name is Jagodja. I was born on the slopes of the great mountain.</p>
       <p>My brother is Manamia, mangi of Mamba. <em>Mangi</em> means chief. My family is of rank. My people are the Chagga.</p>
@@ -356,26 +375,26 @@ button{font:inherit;color:inherit}
   <aside class="speaker" aria-label="Who is speaking">
     <div class="speaker__in">
       <div class="portrait" data-char="char_rosa" data-tip="char_rosa"></div>
-      <div class="plaque">
+      <div class="slip torn">
         <div class="unknown">
-          <p class="plaque__name">Who is speaking?</p>
-          <p class="plaque__when">Keep reading</p>
+          <p class="slip__name">Who is speaking?</p>
+          <p class="slip__when">Keep reading</p>
         </div>
         <div class="known">
-          <p class="plaque__name">Rosa Luxemburg</p>
-          <p class="plaque__role">Socialist, member of the SPD</p>
-          <p class="plaque__when">Berlin, 1914</p>
+          <p class="slip__name">Rosa Luxemburg</p>
+          <p class="slip__role">Socialist, member of the SPD</p>
+          <p class="slip__when">Berlin, 1914</p>
         </div>
-        <p class="plaque__ai">AI-generated portrait</p>
+        <p class="slip__ai">AI-generated portrait</p>
       </div>
     </div>
   </aside>
   <div class="speech">
-    <h2 class="chapter__head"><span class="chapter__year">1914</span><span class="chapter__place">Berlin, capital of the German Empire</span></h2>
+    <h2 class="chapter__head"><span class="chapter__year">1914</span><span class="chapter__place">Berlin</span></h2>
     <div class="beat">
       <p class="lead">Inspect this caricature closely.<sup class="fn"><a href="#n5" id="r5">5</a></sup><sup class="fn"><a href="#n6" id="r6">6</a></sup></p>
       <p>You have just met Jagodja. It shows how her story ends.</p>
-      <figure class="pic" data-slot="brunnen"></figure>
+      <figure class="pic pic--big" data-slot="brunnen"></figure>
       <p>Carl Peters had her hanged – you can see him in the middle with the gallows. My party leader accused him loudly in the parliament:<sup class="fn"><a href="#n7" id="r7">7</a></sup></p>
       <blockquote><p>“If your colonial policy has such consequences, then you have every reason to turn your backs on the whole of Africa as quickly as possible and to complete your work of civilization and culture here in Germany.”<sup class="fn"><a href="#n8" id="r8">8</a></sup></p></blockquote>
     </div>
@@ -394,10 +413,14 @@ button{font:inherit;color:inherit}
     <div class="beat">
       <p>The city suffers from what people already call a <em>Denkmalseuche</em>, a monument epidemic.<sup class="fn"><a href="#n12" id="r12">12</a></sup></p>
       <p>Since German unification under Otto von Bismarck in 1871, the ruling classes have worked tirelessly to create a common national identity.<sup class="fn"><a href="#n13" id="r13">13</a></sup> The empire brought Prussians, Bavarians, Saxons, and many others under one flag. And monuments at every corner are supposed to remind the German people that they belong together.</p>
-      <figure class="pic" data-slot="kaiser"></figure>
-      <figure class="pic" data-slot="bismarck"></figure>
-      <figure class="pic" data-slot="siegesallee"></figure>
-      <figure class="pic" data-slot="maerchen"></figure>
+      <div class="pair">
+        <figure class="pic" data-slot="kaiser"></figure>
+        <figure class="pic" data-slot="bismarck"></figure>
+      </div>
+      <div class="pair">
+        <figure class="pic" data-slot="siegesallee"></figure>
+        <figure class="pic" data-slot="maerchen"></figure>
+      </div>
       <p class="lead">But their boundary drawing didn’t stop there.</p>
     </div>
     <div class="beat">
@@ -414,20 +437,20 @@ button{font:inherit;color:inherit}
 </section>
 
 <!-- ============ 3. HEDWIG HEYL, JUNE 1914 (left) ============ -->
-<section class="chapter side-left" id="hedwig" data-chapter data-date="Berlin, June 1914" data-label="Hedwig Heyl, 1914">
+<section class="chapter side-left" id="hedwig" data-chapter data-date="Berlin, 1914" data-label="Hedwig Heyl, 1914">
   <aside class="speaker" aria-label="Who is speaking">
     <div class="speaker__in">
       <div class="portrait" data-char="char_hedwig" data-tip="char_hedwig"></div>
-      <div class="plaque">
-        <p class="plaque__name">Hedwig Heyl</p>
-        <p class="plaque__role">Leader of the Women’s League of the German Colonial Society</p>
-        <p class="plaque__when">Berlin, June 1914</p>
-        <p class="plaque__ai">AI-generated portrait</p>
+      <div class="slip torn">
+        <p class="slip__name">Hedwig Heyl</p>
+        <p class="slip__role">Leader of the Women’s League of the German Colonial Society</p>
+        <p class="slip__when">Berlin, 1914</p>
+        <p class="slip__ai">AI-generated portrait</p>
       </div>
     </div>
   </aside>
   <div class="speech">
-    <h2 class="chapter__head"><span class="chapter__year">1914</span><span class="chapter__place">June, Pariser Platz, Berlin</span></h2>
+    <h2 class="chapter__head"><span class="chapter__year">1914</span><span class="chapter__place">Berlin</span></h2>
     <div class="beat">
       <p class="lead">My name is Hedwig Heyl. It’s still 1914, June to be precise, and I am sixty-four years old.</p>
       <p>Since 1910 I have led the Women’s League of the German Colonial Society.<sup class="fn"><a href="#n18" id="r18">18</a></sup> The German Colonial Society that I lead has nineteen thousand members. We choose decent, hard-working German girls and send them to South West Africa as housekeepers and teachers – and, God willing, as wives.<sup class="fn"><a href="#n19" id="r19">19</a></sup></p>
@@ -473,16 +496,16 @@ button{font:inherit;color:inherit}
   <aside class="speaker" aria-label="Who is speaking">
     <div class="speaker__in">
       <div class="portrait" data-char="char_agnes" data-tip="char_agnes"></div>
-      <div class="plaque">
-        <p class="plaque__name">Agnes von Boemcken</p>
-        <p class="plaque__role">Chairwoman of the Women’s League of the German Colonial Society</p>
-        <p class="plaque__when">Bremen, 1932</p>
-        <p class="plaque__ai">AI-generated portrait</p>
+      <div class="slip torn">
+        <p class="slip__name">Agnes von Boemcken</p>
+        <p class="slip__role">Chairwoman of the Women’s League of the German Colonial Society</p>
+        <p class="slip__when">Bremen, 1932</p>
+        <p class="slip__ai">AI-generated portrait</p>
       </div>
     </div>
   </aside>
   <div class="speech">
-    <h2 class="chapter__head"><span class="chapter__year">1932</span><span class="chapter__place">Bremen, at the unveiling of the elephant</span></h2>
+    <h2 class="chapter__head"><span class="chapter__year">1932</span><span class="chapter__place">Bremen</span></h2>
     <div class="beat">
       <p class="lead">My name is Agnes von Boemcken.<sup class="fn"><a href="#n23" id="r23">23</a></sup></p>
       <p>This year, 1932, I became chairwoman of the Women’s League of the German Colonial Society – the league Hedwig Heyl led. Frau Heyl is eighty-two now and lives quietly in Berlin. I wish she had been here today.<sup class="fn"><a href="#n24" id="r24">24</a></sup> This, Bremen, is her hometown.</p>
@@ -503,7 +526,7 @@ button{font:inherit;color:inherit}
     <div class="beat">
       <p>Half a decade later, political stability was regained and the colonial question was revived. The Germany of today is not the Germany that emerged from defeat and humiliation.</p>
       <p class="lead">Under Hitler, a new national consciousness is awakening.<sup class="fn"><a href="#n27" id="r27">27</a></sup></p>
-      <figure class="pic" data-slot="exhibition"></figure>
+      <figure class="pic pic--big" data-slot="exhibition"></figure>
       <p>The needs of nations remain. The need for space, opportunity, resources, and development remains.</p>
     </div>
     <div class="beat">
@@ -518,16 +541,16 @@ button{font:inherit;color:inherit}
   <aside class="speaker" aria-label="Who is speaking">
     <div class="speaker__in">
       <div class="portrait" data-char="char_jagodja2026" data-tip="char_jagodja2026"></div>
-      <div class="plaque">
-        <p class="plaque__name">Jagodja</p>
-        <p class="plaque__role">Eighteen, named after her great-great-great-aunt</p>
-        <p class="plaque__when">Moshi, 2026</p>
-        <p class="plaque__ai">AI-generated portrait</p>
+      <div class="slip torn">
+        <p class="slip__name">Jagodja</p>
+        <p class="slip__role">Eighteen, named after her great-great-great-aunt</p>
+        <p class="slip__when">Moshi, 2026</p>
+        <p class="slip__ai">AI-generated portrait</p>
       </div>
     </div>
   </aside>
   <div class="speech">
-    <h2 class="chapter__head"><span class="chapter__year">2026</span><span class="chapter__place">Moshi, below the mountain, Tanzania</span></h2>
+    <h2 class="chapter__head"><span class="chapter__year">2026</span><span class="chapter__place">Moshi</span></h2>
     <div class="beat">
       <p class="lead">My name is Jagodja. I am eighteen.</p>
       <p>I live near Moshi, below the mountain, in Tanzania. I am named after my great-great-great-aunt.</p>
@@ -566,12 +589,13 @@ button{font:inherit;color:inherit}
 </section>
 
 <!-- ============ FINISH: BACK ON THE EMPTY PLAZA ============ -->
-<section class="ride ride--outro" id="outro" data-date="Bersarinplatz, today" aria-label="Back on Bersarinplatz">
+<section class="ride ride--outro" id="outro" data-date="Bersarinplatz, 2026" aria-label="Back on Bersarinplatz">
   <figure class="stage" data-tip="plaza_empty">
     <div class="stage__ph" data-ph>Bersarinplatz, today</div>
     <img class="stage__img" data-stage="plaza_empty" alt="" hidden>
     <figcaption class="visually-hidden">Bersarinplatz today, without the monument.</figcaption>
     <div class="scrim" style="opacity:.5"></div>
+    <div class="outro-figure" aria-hidden="true"><img data-outro-char alt="" hidden></div>
     <div class="stage__card torn" data-ostep="0">
       <p class="big">We’re back on Bersarinplatz.</p>
       <p class="lead">Nothing was built in the end.</p>
@@ -619,6 +643,7 @@ button{font:inherit;color:inherit}
     <li>Hilt, Kerstin. “Deutsche Kolonien: Carl Peters” [German colonies: Carl Peters]. <i>Planet Wissen</i>, November 29, 2024. <a href="https://www.planet-wissen.de/geschichte/deutsche_geschichte/deutsche_kolonien/pwiewissensfrage588.html">https://www.planet-wissen.de/geschichte/deutsche_geschichte/deutsche_kolonien/pwiewissensfrage588.html</a>.</li>
     <li>Hobsbawm, E. J. <i>Nations and Nationalism since 1780: Programme, Myth, Reality</i>. Cambridge University Press, 1992.</li>
     <li>“Karl Körner in Südwestafrika” [Karl Körner in South West Africa]. Accessed November 8, 2026. <a href="https://www.digicult-verbund.de/item/DE-MUS-076111/lido/Album%20252-22">https://www.digicult-verbund.de/item/DE-MUS-076111/lido/Album 252-22</a>.</li>
+    <li>Kocka, Jürgen, and Heinz-Gerhard Haupt. “Comparison and Beyond: Traditions, Scope, and Perspectives of Comparative History.” In <i>Comparative and Transnational History</i>. Berghahn Books, 2022. <a href="https://www.degruyterbrill.com/document/doi/10.1515/9781845458034-002/html">https://www.degruyterbrill.com/document/doi/10.1515/9781845458034-002/html</a>.</li>
     <li>“Nachfahren von Mangi Molelia in Berlin” [Descendants of Mangi Molelia in Berlin]. Stiftung Preußischer Kulturbesitz. Accessed November 10, 2026. <a href="https://www.preussischer-kulturbesitz.de/meldung/artikel/2026/02/19/nachfahren-von-mangi-molelia-in-berlin.html">https://www.preussischer-kulturbesitz.de/meldung/artikel/2026/02/19/nachfahren-von-mangi-molelia-in-berlin.html</a>.</li>
     <li>Nettl, John Peter. <i>Rosa Luxemburg</i>. London: Oxford University Press, 1969. <a href="http://archive.org/details/rosaluxemburg0000unse">http://archive.org/details/rosaluxemburg0000unse</a>.</li>
     <li>Peters, Carl. <i>Das deutsch-ostafrikanische Schutzgebiet</i> [The German East African protectorate]. 1895. <a href="http://archive.org/details/11612133bsb">http://archive.org/details/11612133bsb</a>.</li>
@@ -810,8 +835,8 @@ var SLOTS = {
     alt:"Gendarmenmarkt, 2018. The same demand, four years later, outside the ceremony at which more remains were handed back to Namibia.",
     hover:"The same demand, four years later, outside the ceremony at which more remains were handed back to Namibia.",short:"Photo: Joachim Zeller, in Diallo and Zeller 2024",full:DZPH},
   anticolonial:{file:"anticolonial-monument.jpg",title:"Renaming: the Anti-Colonial Monument",
-    alt:"Renaming: the Anti-Colonial Monument. “For human rights, against apartheid.” Before Namibia’s independence in 1990, the country was ruled by apartheid South Africa. Activists claimed the elephant for that struggle.",
-    hover:"“For human rights, against apartheid.” Before Namibia’s independence in 1990, the country was ruled by a German-led apartheid system. Activists claimed the elephant for that struggle.",
+    alt:"Renaming: the Anti-Colonial Monument. “For human rights, against apartheid.” Namibia was once the German colony of South West Africa. After 1915 South Africa took it over and imposed apartheid there until independence in 1990. Activists turned the elephant, built to mourn Germany’s lost colonies, into a site of protest for the former colony’s freedom.",
+    hover:"“For human rights, against apartheid.” Namibia was once the German colony of South West Africa. After 1915 South Africa took it over and imposed apartheid there until independence in 1990. Activists turned the elephant, built to mourn Germany’s lost colonies, into a site of protest for the former colony’s freedom.",
     short:"Wikipedia, “Antikolonialdenkmal”",full:WIKI},
   detail2:{file:"monument-detail-2.jpg",title:"Plaque",
     alt:"In memory of the victims of German colonial rule in Namibia, 1884–1914.",
@@ -925,9 +950,25 @@ $$("figure.pic[data-slot]").forEach(function(fig){
 });
 $$("[data-char]").forEach(function(box){
   var s = SLOTS[box.dataset.char], img = document.createElement("img");
-  img.alt = s.alt; box.appendChild(img);
-  loadInto(img, s.file, null, function(){ img.remove(); box.innerHTML = '<span class="ph">'+esc(s.title)+'</span>'; });
+  img.alt = s.alt; img.dataset.tip = box.dataset.char; box.removeAttribute("data-tip"); box.appendChild(img);
+  loadInto(img, s.file, placePortraits, function(){ img.remove(); box.innerHTML = '<span class="ph">'+esc(s.title)+'</span>'; });
 });
+(function(){
+  var img = $("[data-outro-char]");
+  loadInto(img, SLOTS.char_jagodja2026.file, function(){ img.hidden = false; placePortraits(); });
+})();
+/* Centre each figure in its column; a figure wider than the column
+   overflows towards the screen edge, never over the text. */
+function placePortraits(){
+  $$(".portrait img, .outro-figure img").forEach(function(img){
+    if (!img.naturalWidth || window.innerWidth <= 820 && img.closest(".portrait")) { img.style.left = ""; return; }
+    var col = img.parentNode, cw = col.clientWidth, w = img.offsetWidth;
+    var right = !!img.closest(".side-right"), left;
+    if (w <= cw) left = (cw - w) / 2;
+    else left = right ? 0 : cw - w;
+    img.style.left = left + "px";
+  });
+}
 $$("img[data-stage]").forEach(function(img){
   loadInto(img, SLOTS[img.dataset.stage].file, function(){
     img.hidden = false;
@@ -978,7 +1019,7 @@ var tipTargets = "[data-tip],[data-note],.tick";
 var mouseX = -1, mouseY = -1;
 function tipAt(target, x, y){
   var el = target && target.closest && target.closest(tipTargets);
-  if (!el || target.closest(".stage__card,.maplabel,.plaque")){ hideTip(); return; }
+  if (!el || target.closest(".stage__card,.maplabel,.slip")){ hideTip(); return; }
   if (tip._el !== el){ tip._el = el; showTip(el, x, y); } else placeTip(x, y);
 }
 document.addEventListener("mousemove", function(e){ mouseX = e.clientX; mouseY = e.clientY; tipAt(e.target, mouseX, mouseY); });
@@ -1195,8 +1236,8 @@ function mapScene(){
   var late = t > .62;
   if (mapScene.late !== late){
     mapScene.late = late;
-    $("#mapYr").textContent = late ? "1891" : "Germany";
-    $("#mapTxt").textContent = late ? "Kilimanjaro, in what Germany now calls “German East Africa”." : "A late-comer in the race for colonies.";
+    $("#mapYr").textContent = late ? "1891" : "Deutsches Reich";
+    $("#mapTxt").textContent = late ? "Kilimanjaro, in what the Reich now calls “German East Africa”." : "The German Empire, a late-comer in the race for colonies.";
   }
 }
 if (/[?&]mapdebug/.test(location.search)){
@@ -1233,7 +1274,7 @@ function onScroll(){
 }
 var raf = 0;
 window.addEventListener("scroll", function(){ if (!raf) raf = requestAnimationFrame(function(){ raf = 0; onScroll(); }); }, {passive:true});
-window.addEventListener("resize", function(){ measure(); mapLayout(); placeTicks(); lastStep = lastO = -1; onScroll(); });
+window.addEventListener("resize", function(){ measure(); placePortraits(); mapLayout(); placeTicks(); lastStep = lastO = -1; onScroll(); });
 if (window.ResizeObserver){ var rt; new ResizeObserver(function(){ clearTimeout(rt); rt = setTimeout(placeTicks, 200); }).observe(document.body); }
 
 var dateObs = new IntersectionObserver(function(es){
@@ -1265,7 +1306,8 @@ var revealObs = new IntersectionObserver(function(es){
 }, {rootMargin:"0px 0px -35% 0px"});
 $$("[data-reveal]").forEach(function(el){ revealObs.observe(el); });
 
-measure(); placeTicks(); onScroll();
+measure(); placePortraits(); placeTicks(); onScroll();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ measure(); placePortraits(); placeTicks(); });
 </script>
 </body>
 </html>
