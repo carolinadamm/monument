@@ -28,7 +28,7 @@
   --bar-h:52px; --stage-h:calc(100vh - 52px);
   --pw:clamp(250px,29vw,480px);      /* width of the protagonist column */
   --outer:clamp(1rem,4.5vw,4.5rem);  /* page margin on the far side */
-  --inner:clamp(1rem,3vw,3rem);      /* gap next to the protagonist */
+  --inner:clamp(.75rem,2vw,2rem);    /* gap next to the protagonist */
   --figure-h:173%;                   /* protagonist height, relative to the screen */
   --figure-top:20%;                  /* puts the head on the upper third line */
   --plaza-focus:50% 55%;             /* which part of the Bersarinplatz pictures stays visible */
@@ -68,16 +68,16 @@ blockquote p:last-child{margin:0}
 button{font:inherit;color:inherit}
 
 /* ---------- Timeline bar ---------- */
-.timeline-header{position:fixed;top:0;left:0;right:0;z-index:9000;background:#1C1A17;color:#F4EFEA;border-bottom:3px solid #8A857E;
-  padding:calc(.5rem + env(safe-area-inset-top,0px)) 1rem .5rem;box-shadow:0 4px 12px rgba(0,0,0,.3)}
-.timeline-header__content{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:1.25rem;min-height:calc(var(--bar-h) - 1rem)}
-.timeline-header__date{margin:0;font-family:var(--font-body);font-size:.95rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;min-width:14rem}
-.timeline-header__progress-track{flex-grow:1;height:8px;background:#3E3A35;position:relative;border:1px solid #CFC9C0}
+.timeline-header{position:fixed;top:0;left:0;right:0;z-index:9000;background:#1C1A17;color:#F4EFEA;border-bottom:2px solid #8A857E;
+  padding:calc(.3rem + env(safe-area-inset-top,0px)) 1rem .3rem;box-shadow:0 3px 10px rgba(0,0,0,.28)}
+.timeline-header__content{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:1.1rem;min-height:1.6rem}
+.timeline-header__date{margin:0;font-family:var(--font-body);font-size:.78rem;line-height:1.2;font-weight:700;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;min-width:12rem}
+.timeline-header__progress-track{flex-grow:1;height:6px;background:#3E3A35;position:relative;border:1px solid #CFC9C0}
 .timeline-header__progress-bar{height:100%;background:#CFC9C0;width:0%}
-.tick{position:absolute;top:50%;width:26px;height:30px;margin-left:-13px;transform:translateY(-50%);display:flex;justify-content:center;align-items:center}
-.tick::before{content:"";width:3px;height:18px;background:#F4EFEA}
+.tick{position:absolute;top:50%;width:24px;height:26px;margin-left:-12px;transform:translateY(-50%);display:flex;justify-content:center;align-items:center}
+.tick::before{content:"";width:2px;height:14px;background:#F4EFEA}
 .tick:hover::before,.tick:focus-visible::before{width:5px;background:#FFFFFF}
-@media (max-width:640px){ .timeline-header__date{min-width:0;font-size:.78rem;letter-spacing:.08em} }
+@media (max-width:640px){ .timeline-header__date{min-width:0;font-size:.72rem;letter-spacing:.08em} }
 
 /* ---------- Torn paper (SVG filter; plain straight edges where unsupported) ---------- */
 .torn{position:relative;isolation:isolate;padding:2rem 1.9rem;color:#1C1A17}
@@ -138,7 +138,7 @@ button{font:inherit;color:inherit}
 .portrait .ph{position:absolute;top:40%;left:0;right:0;color:var(--text-muted);text-align:center;font-family:var(--font-heading);font-style:italic}
 .hidden-speaker .portrait img{filter:brightness(0);opacity:.28!important}
 /* the paper slip with the name */
-.slip{position:absolute;left:50%;bottom:clamp(1rem,5vh,3rem);transform:translateX(-50%) rotate(-1.2deg);width:min(86%,290px);z-index:2;
+.slip{position:absolute;left:50%;bottom:clamp(1rem,5vh,3rem);transform:translateX(-50%) rotate(-1.2deg);width:min(100%,280px);z-index:2;
   padding:1rem 1.2rem .9rem;text-align:center;font-family:var(--font-heading)}
 .side-right .slip{transform:translateX(-50%) rotate(1.2deg)}
 .slip p{margin:0}
@@ -962,13 +962,36 @@ function placePortraits(){
     if (!img.naturalWidth || (mobile && img.closest(".portrait"))){
       img.style.left = ""; holder.style.removeProperty("--pw"); holder.style.removeProperty("--push"); return;
     }
-    /* the column is as wide as the figure (within limits), so the text sits right beside her */
-    var w = img.offsetWidth;
-    var col = Math.round(Math.max(200, Math.min(w, window.innerWidth * 0.42, 600)));
+    /* the column is as wide as the part of the figure you can actually see
+       (head down to the screen edge), so she sits close to the edge and the text */
+    var w = img.offsetWidth, vis = visibleBox(img);
+    var vl = vis.l * w, vw = (vis.r - vis.l) * w, pad = 6;
+    var col = Math.round(Math.max(170, Math.min(vw + 2 * pad, window.innerWidth * 0.42, 600)));
     holder.style.setProperty("--pw", col + "px");
-    holder.style.setProperty("--push", Math.ceil(Math.max(0, (w - col) / 2)) + "px");
-    img.style.left = ((col - w) / 2) + "px";          /* centred on the paper slip */
+    holder.style.setProperty("--push", Math.ceil(Math.max(0, (vw + 2 * pad - col) / 2)) + "px");
+    img.style.left = ((col - vw) / 2 - vl) + "px";    /* visible part centred on the paper slip */
   });
+}
+/* Left and right edge (as fractions) of the drawing's visible part,
+   read from its transparent background. Falls back to the full width. */
+function visibleBox(img){
+  if (img._vis) return img._vis;
+  var box = {l: 0, r: 1};
+  try {
+    var cw = 200, ch = Math.round(cw * img.naturalHeight / img.naturalWidth);
+    var c = document.createElement("canvas"); c.width = cw; c.height = ch;
+    var ctx = c.getContext("2d"); ctx.drawImage(img, 0, 0, cw, ch);
+    /* share of the drawing above the screen's bottom edge */
+    var visFrac = (1 - parseFloat(getComputedStyle(img).top) / img.parentNode.clientHeight) * img.parentNode.clientHeight / img.offsetHeight;
+    var rows = Math.max(1, Math.min(ch, Math.round(ch * visFrac)));
+    var d = ctx.getImageData(0, 0, cw, rows).data, minX = cw, maxX = -1;
+    for (var y = 0; y < rows; y++) for (var x = 0; x < cw; x++){
+      if (d[(y * cw + x) * 4 + 3] > 24){ if (x < minX) minX = x; if (x > maxX) maxX = x; }
+    }
+    if (maxX >= minX) box = {l: minX / cw, r: (maxX + 1) / cw};
+  } catch (e) { /* picture can't be read (e.g. opened as a local file): use full width */ }
+  img._vis = box;
+  return box;
 }
 $$("img[data-stage]").forEach(function(img){
   loadInto(img, SLOTS[img.dataset.stage].file, function(){
@@ -1276,7 +1299,7 @@ function onScroll(){
 }
 var raf = 0;
 window.addEventListener("scroll", function(){ if (!raf) raf = requestAnimationFrame(function(){ raf = 0; onScroll(); }); }, {passive:true});
-window.addEventListener("resize", function(){ measure(); placePortraits(); mapLayout(); placeTicks(); lastStep = lastO = -1; onScroll(); });
+window.addEventListener("resize", function(){ measure(); $$(".portrait img, .outro-figure img").forEach(function(i){ i._vis = null; }); placePortraits(); mapLayout(); placeTicks(); lastStep = lastO = -1; onScroll(); });
 if (window.ResizeObserver){ var rt; new ResizeObserver(function(){ clearTimeout(rt); rt = setTimeout(placeTicks, 200); }).observe(document.body); }
 
 var dateObs = new IntersectionObserver(function(es){
