@@ -26,11 +26,11 @@
   --font-size-base:1.125rem; --line-height-base:1.65; --line-height-heading:1.2;
   --min-tap-target:48px;
   --bar-h:52px; --stage-h:calc(100vh - 52px);
-  --pw:clamp(250px,29vw,480px);      /* width of the protagonist column */
+  --pw:max(220px,30vw);              /* protagonist column: 30 % of the screen; the story gets the other 70 % */
   --outer:clamp(1rem,4.5vw,4.5rem);  /* page margin on the far side */
   --inner:clamp(.75rem,2vw,2rem);    /* gap next to the protagonist */
   --figure-h:173%;                   /* protagonist height, relative to the screen */
-  --figure-top:20%;                  /* puts the head on the upper third line */
+  --figure-top:6%;                   /* how far below the top bar the figure starts */
   --plaza-focus:50% 55%;             /* which part of the Bersarinplatz pictures stays visible */
   color-scheme:light;
 }
@@ -958,18 +958,16 @@ $$("[data-char]").forEach(function(box){
 function placePortraits(){
   var mobile = window.innerWidth <= 820;
   $$(".portrait img, .outro-figure img").forEach(function(img){
-    var holder = img.closest(".chapter") || img.closest(".ride--outro");
-    if (!img.naturalWidth || (mobile && img.closest(".portrait"))){
-      img.style.left = ""; holder.style.removeProperty("--pw"); holder.style.removeProperty("--push"); return;
-    }
-    /* the column is as wide as the part of the figure you can actually see
-       (head down to the screen edge), so she sits close to the edge and the text */
-    var w = img.offsetWidth, vis = visibleBox(img);
-    var vl = vis.l * w, vw = (vis.r - vis.l) * w, pad = 6;
-    var col = Math.round(Math.max(170, Math.min(vw + 2 * pad, window.innerWidth * 0.42, 600)));
-    holder.style.setProperty("--pw", col + "px");
-    holder.style.setProperty("--push", Math.ceil(Math.max(0, (vw + 2 * pad - col) / 2)) + "px");
-    img.style.left = ((col - vw) / 2 - vl) + "px";    /* visible part centred on the paper slip */
+    if (!img.naturalWidth || (mobile && img.closest(".portrait"))){ img.style.left = ""; return; }
+    /* the column keeps its fixed share of the screen; the figure keeps its size.
+       Her visible part is centred in the column; if it is wider than the column,
+       it reaches out towards the screen edge, never over the story. */
+    var col = img.parentNode.clientWidth, w = img.offsetWidth, vis = visibleBox(img);
+    var vl = vis.l * w, vr = vis.r * w, vw = vr - vl, pad = 8, left;
+    if (vw <= col - 2 * pad) left = (col - vw) / 2 - vl;
+    else if (img.closest(".side-right")) left = pad - vl;
+    else left = col - pad - vr;
+    img.style.left = left + "px";
   });
 }
 /* Left and right edge (as fractions) of the drawing's visible part,
