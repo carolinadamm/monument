@@ -1,4 +1,4 @@
-# Complications in Building a Nation: Five Female Voices
+# Complications in Building a Nation: Five Delineations
 
 A scrolling history walk about the German Colonial War Memorial that was never built on Berlin's Bersarinplatz.
 
@@ -6,68 +6,30 @@ A scrolling history walk about the German Colonial War Memorial that was never b
 
 ```
 index.html
-images/
-  char-jagodja-1891.png
-  ...
+favicon.png            (tab icon)
+apple-touch-icon.png   (icon when saved to a phone's home screen)
+images/                (made by compress_images.py)
 ```
 
-Put every picture into a folder called `images` next to `index.html`, renamed as listed below. The ending (.jpg, .jpeg or .png) doesn't have to match: the page also tries the other endings. A picture that is missing shows as a labelled box with the expected file name, so you can spot gaps quickly.
+Do not commit `drive-images/` or `compress_images.py`'s originals; keep the full-size files in Google Drive.
 
-To publish: Settings → Pages → Deploy from branch → `main` / root. The site appears at `https://<your-name>.github.io/<repository>/`.
+## Preparing the pictures
 
-## Rename your Drive files like this
+1. Download your Google Drive picture folder and unzip it into `drive-images/` next to `index.html`. Subfolders are fine.
+2. Make sure it also contains the new files: `background_light.png`, `background_dark.png`, `kaiser.jpg`, `bismarck.jpg`, `siegesallee.jpg` and `marchenbrunnen.jpg`.
+3. Run `pip install pillow` once, then `python compress_images.py`.
 
-| Drive file | Rename to |
-|---|---|
-| Jagodja_1895.PNG | char-jagodja-1891.png |
-| Rosa Luxemburg.PNG | char-rosa-luxemburg.png |
-| Hedwig Heyl.PNG | char-hedwig-heyl.png |
-| Agnes von Boemcken.PNG | char-agnes-von-boemcken.png |
-| Jagodja_2026.PNG | char-jagodja-2026.png |
-| First pic - Bersarinplatz as if elephant was there today.png | plaza-with-monument.png |
-| Bersarinplatz as it is today (empty).PNG | plaza-today.png |
-| Kolonialkarte_1884_2.jpg | colonial-map.jpg |
-| Das deutsch-ostafrikanische Schutzgebiet S. 137 Kilimanjaro von Moshi.png | kilimanjaro-from-moshi.png |
-| Deutsche Emin-Pascha Expedition S. 41 Ankunft Strand.png | landing-on-the-coast.png |
-| Deutsche Emin-Pascha Expedition S. 57 Zelte.png | expedition-camp.png |
-| Das deutsch-ostafrikanische Schutzgebiet S. 297 Daressalam.png | dar-es-salaam.png |
-| Deutsche Emin-Pascha Expedition S. 129 Auseinandersetzung.png | using-force.png |
-| Deutsche Emin-Pascha Expedition S. 21 Carl Peters.png | carl-peters.png |
-| Das deutsch-ostafrikanische Schutzgebiet S. 132Moshi Militärstation+.png | moshi-military-station.png |
-| Der Kolonialbrunnen Satire with Carl Peters.jpg | kolonialbrunnen.jpg |
-| Pariser_Platz,_Berlin_1900_(2).jpg | pariser-platz-1900.jpg |
-| Competition Monument Draft Hermann Hahn & Carl Sattler.jpg | design-hahn-sattler.jpg |
-| Competition Monument Draft Adolph Brütt.jpg | design-bruett.jpg |
-| Competition Monument Draft Adof Brütt (landscape).jpg | design-bruett-landscape.jpg |
-| Competition Monument Draft Georg Wrba (landscape).jpg | design-wrba.jpg |
-| Competition Monument Draft Ludwig Cauer.jpg | design-cauer.jpg |
-| Competition Monument Draft Elephant Winner / Fritz Behn.jpg | design-behn.jpg |
-| Newspaper article with elephant winning draft.jpg | newspaper-1914.jpg |
-| 1932_Eröffnung_Elephant.jpg | elephant-opening-1932.jpg |
-| Elefant_mit_Inschrift_Unsere_Kolonien.jpg | elephant-unsere-kolonien.jpg |
-| Reichskanzler Theobald von Bethmann-Hollweg während seiner Rede vor dem Reichstag am 4. August 1914 (pa/akg).jpg | reichstag-1914.jpg |
-| VERSAILLER_VERTRAG_03.jpeg | versailles-protest-1919.jpg |
-| elefant-denkmal-antrag.jpg | application-1926.jpg |
-| Kolonialausstellung8.jpg | colonial-exhibition-1935.jpg |
-| Antikolonialdenkmal_Bremen_-msu-2022-9798-.jpg | elephant-today.jpg |
-| 2011 charite herrero nama kontaktaufnahme ancestors.png | charite-2011.png |
-| 2014 2014 charite völkermord verjährt nicht.png | charite-2014.png |
-| 2018 völkermord verjährt nicht gendarmenmarkt protest.png | gendarmenmarkt-2018.png |
-| apologies and reparations for colonization protest 2004 120 jahrestag konkokonferenz.png | protest-2004.png |
-| Renamed street picture.jpg | mohrenstrasse-sign.jpg |
-| decolonize berlin auf bismarckstatue.png | decolonize-berlin.png |
-| Antikolonialdenkmal_Bremen-für menschenrechte gegen apartheid.jpg | anticolonial-monument.jpg |
-| Antikolonialdenkmal_Bremen_Ohamakari_Tafel.jpg | ohamakari-plaque.jpg |
-| Antikolonialdenkmal_Bremen_insignia1.jpg | monument-detail-1.jpg |
-| Antikolonialdenkmal_Bremen_insignia2.jpg | monument-detail-2.jpg |
-| nelson mandela park vor elephant.jpg | nelson-mandela-park.jpg |
+The script finds every picture, gives it the name the website expects, shrinks it and saves it as `.webp` into `images/`. Missing or unreadable pictures are listed under "ERROR". Run it again after adding them: finished pictures are skipped. `python compress_images.py --force` redoes everything.
 
-Not used any more: the first Kilimanjaro picture (S. 113), both steamers, the second confrontation (S. 233), the landscape scene (S. 97), the second view of Behn's design, `Antikolonialdenkmal_HB2013.jpg` and `Elephant Statue in Bremen today.jpg`.
+The full list of Drive names and website names is the `RENAME` table at the top of `compress_images.py`.
 
-Large photos (over about 1 MB) are worth shrinking before uploading, for example with squoosh.app, so the page loads quickly on phones.
+## Publishing on Vercel
+
+Push the repository to GitHub, then import it in Vercel (framework: "Other", no build command). Every push updates the site.
 
 ## Editing
 
-- **Captions, hover texts and credits:** in `index.html`, search for `var SLOTS`. Each picture has `title` (caption), `hover` (text near the cursor), `short` (credit under the picture) and `full` (entry in the image credits).
+- **Captions, alt texts, hover texts and credits:** in `index.html`, search for `var SLOTS`. Each picture has `title` (caption), `alt` (read aloud by screen readers), `hover` (text near the cursor), `short` (credit under the picture) and `full` (entry in the image credits).
 - **Footnotes:** search for `var NOTES`. They are numbered as in the essay.
-- **Map flight:** open the page with `?mapdebug` added to the address, scroll to the map and click on Germany and on Kilimanjaro. Copy the two x/y pairs into `MAP_FROM` and `MAP_TO` near the top of the script.
+- **Title flicker speed:** `FLICKER_PAUSE_MIN` and `FLICKER_PAUSE_MAX` near the top of the script.
+- **Map flight:** open the page with `?mapdebug` added to the address, scroll to the map and click on Germany and on Kilimanjaro. Copy the two x/y pairs into `MAP_FROM` and `MAP_TO`. `MAP_FLIGHT_MS` sets how long the flight takes.
