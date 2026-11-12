@@ -29,6 +29,9 @@
   --pw:clamp(250px,29vw,480px);      /* width of the protagonist column */
   --outer:clamp(1rem,4.5vw,4.5rem);  /* page margin on the far side */
   --inner:clamp(1rem,3vw,3rem);      /* gap next to the protagonist */
+  --figure-h:173%;                   /* protagonist height, relative to the screen */
+  --figure-top:20%;                  /* puts the head on the upper third line */
+  --plaza-focus:50% 55%;             /* which part of the Bersarinplatz pictures stays visible */
   color-scheme:light;
 }
 :root.dark-moment{
@@ -84,7 +87,7 @@ button{font:inherit;color:inherit}
 .ride{position:relative}
 .ride--intro{height:600vh} .ride--map{height:200vh} .ride--outro{height:300vh}
 .stage{position:sticky;top:var(--bar-h);height:var(--stage-h);overflow:hidden;background:#2b2724;margin:0}
-.stage__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 100%;max-width:none}
+.stage__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--plaza-focus);max-width:none}
 .stage__ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#CFC6B6;text-align:center;padding:2rem}
 .layer-monument{transition:opacity .9s ease}
 .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.05) 45%,rgba(0,0,0,.5));pointer-events:none;transition:opacity .6s}
@@ -109,17 +112,15 @@ button{font:inherit;color:inherit}
 .scrollcue::after{content:"";width:2px;height:30px;background:currentColor;animation:cue 1.8s ease-in-out infinite;transform-origin:top}
 @keyframes cue{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
 #mapImg{position:absolute;top:0;left:0;max-width:none;transform-origin:0 0;will-change:transform}
-.maplabel{position:absolute;left:clamp(1rem,5vw,4rem);bottom:clamp(1.25rem,7vh,5rem);max-width:min(30rem,calc(100% - 2rem))}
-.maplabel .yr{font-family:var(--font-heading);font-size:clamp(2.6rem,7vw,4.4rem);line-height:1;margin:0 0 .35rem;color:#3E3A35}
+.maplabel{position:absolute;left:clamp(1rem,5vw,4rem);bottom:clamp(1.25rem,7vh,5rem);max-width:min(22rem,calc(100% - 2rem));padding:1.3rem 1.5rem;font-size:.95rem}
+.maplabel .yr{font-family:var(--font-heading);font-size:clamp(1.7rem,3.6vw,2.5rem);line-height:1.05;margin:0 0 .3rem;color:#3E3A35}
 .maplabel p{margin:0}
 .outro-figure{position:absolute;left:0;top:0;bottom:0;width:var(--pw);clip-path:inset(0 -100vw 0 -100vw);z-index:1;pointer-events:none}
-.outro-figure img{position:absolute;top:19%;left:0;height:144%;width:auto;max-width:none}
-.ride--outro .stage__card{left:calc(var(--pw) + var(--inner));z-index:2}
+.outro-figure img{position:absolute;top:var(--figure-top);left:0;height:var(--figure-h);width:auto;max-width:none}
+.ride--outro .stage__card{left:calc(var(--pw) + var(--inner) + var(--push,0px));z-index:2}
+/* helper for setting up the map flight; only shown with ?mapdebug in the address */
 .mapdebug{position:absolute;right:1rem;top:1rem;background:#1C1A17;color:#F4EFEA;padding:.6rem .8rem;font-size:.9rem;display:none}
-.debug .outro-figure{position:absolute;left:0;top:0;bottom:0;width:var(--pw);clip-path:inset(0 -100vw 0 -100vw);z-index:1;pointer-events:none}
-.outro-figure img{position:absolute;top:19%;left:0;height:144%;width:auto;max-width:none}
-.ride--outro .stage__card{left:calc(var(--pw) + var(--inner));z-index:2}
-.mapdebug{display:block}
+.debug .mapdebug{display:block}
 
 /* ---------- Chapters: protagonist on alternating sides ---------- */
 .chapter{display:grid;grid-template-columns:var(--pw) minmax(0,1fr);padding-top:3rem}
@@ -129,7 +130,7 @@ button{font:inherit;color:inherit}
 .speaker__in{position:sticky;top:var(--bar-h);height:var(--stage-h);clip-path:inset(0 -100vw 0 -100vw)}
 .portrait{position:absolute;inset:0}
 /* 1.5 × the earlier size; placed so the head falls on the upper third line */
-.portrait img{position:absolute;top:19%;left:0;height:144%;width:auto;max-width:none;cursor:help;
+.portrait img{position:absolute;top:var(--figure-top);left:0;height:var(--figure-h);width:auto;max-width:none;cursor:help;
   opacity:0;transition:opacity .9s ease,translate .9s ease,filter .9s ease}
 .side-left .portrait img{translate:-40px 0}
 .side-right .portrait img{translate:40px 0}
@@ -143,14 +144,14 @@ button{font:inherit;color:inherit}
 .slip p{margin:0}
 .slip__name{font-size:1.35rem;line-height:1.2}
 .slip__role{font-family:var(--font-body);font-size:.85rem;line-height:1.35;margin-top:.3rem!important;color:#3E3A35}
-.slip__when{font-style:italic;font-size:.95rem;margin-top:.35rem!important}
-.slip__ai{font-family:var(--font-body);font-size:.72rem;color:#3E3A35;margin-top:.35rem!important}
+.slip__when{font-style:italic;font-size:1.15rem;margin-top:.3rem!important}
+.slip__ai{font-family:var(--font-body);font-size:.78rem;color:#3E3A35;margin-top:.4rem!important}
 .slip .unknown{display:none}
 .hidden-speaker .slip .known,.hidden-speaker .slip__ai{display:none}
 .hidden-speaker .slip .unknown{display:block}
 
-.speech{min-width:0;padding:0 var(--outer) 4rem var(--inner)}
-.side-right .speech{padding:0 var(--inner) 4rem var(--outer)}
+.speech{min-width:0;padding:0 var(--outer) 4rem calc(var(--inner) + var(--push,0px))}
+.side-right .speech{padding:0 calc(var(--inner) + var(--push,0px)) 4rem var(--outer)}
 .speech p,.speech blockquote,.chapter__head{max-width:min(42rem,100%)}
 .chapter__head{margin:0 0 2.5rem;padding-bottom:.6rem;display:flex;align-items:baseline;gap:1.1rem;flex-wrap:wrap;border-bottom:2px solid var(--rule)}
 .chapter__year{font-size:clamp(4rem,11vw,8.5rem);line-height:.9;color:var(--accent-primary)}
@@ -166,8 +167,8 @@ button{font:inherit;color:inherit}
 
 /* ---------- Pictures: large and frameless ---------- */
 .pic{margin:3rem 0}
-.side-left .pic{margin-right:calc(-1 * var(--outer))}
-.side-left .pic figcaption{padding-right:var(--outer)}
+.side-left .pic{margin-right:calc(-1 * var(--outer) + 1.5rem)}
+.side-left .pic figcaption{padding-right:calc(var(--outer) - 1.5rem)}
 .side-right .speech p,.side-right .speech blockquote,.side-right .chapter__head{margin-left:auto}
 .side-right .pic{display:table;margin-left:auto}
 .side-right .pic figcaption{display:table-caption;caption-side:bottom}
@@ -326,7 +327,6 @@ button{font:inherit;color:inherit}
       <div class="portrait" data-char="char_jagodja1891" data-tip="char_jagodja1891"></div>
       <div class="slip torn">
         <p class="slip__name">Jagodja</p>
-        <p class="slip__role">A woman of Mamba, sister of the mangi Manamia</p>
         <p class="slip__when">Kilimanjaro, 1891</p>
         <p class="slip__ai">AI-generated portrait</p>
       </div>
@@ -382,7 +382,6 @@ button{font:inherit;color:inherit}
         </div>
         <div class="known">
           <p class="slip__name">Rosa Luxemburg</p>
-          <p class="slip__role">Socialist, member of the SPD</p>
           <p class="slip__when">Berlin, 1914</p>
         </div>
         <p class="slip__ai">AI-generated portrait</p>
@@ -443,7 +442,6 @@ button{font:inherit;color:inherit}
       <div class="portrait" data-char="char_hedwig" data-tip="char_hedwig"></div>
       <div class="slip torn">
         <p class="slip__name">Hedwig Heyl</p>
-        <p class="slip__role">Leader of the Women’s League of the German Colonial Society</p>
         <p class="slip__when">Berlin, 1914</p>
         <p class="slip__ai">AI-generated portrait</p>
       </div>
@@ -468,7 +466,7 @@ button{font:inherit;color:inherit}
     <div class="beat">
       <p>My favourite is Hahn and Sattler: a column twenty-five metres high, and on top a Victoria storming forward with sword and shield.<sup class="fn"><a href="#n21" id="r21">21</a></sup> Like our Victory Column.</p>
       <p class="lead">Clear. Proud. Every child understands it.</p>
-      <figure class="pic" data-slot="hahn"></figure>
+      <figure class="pic pic--big" data-slot="hahn"></figure>
     </div>
     <div class="beat">
       <p>Adolf Brütt designed to place a white rider on horseback, and the natives walk peacefully beside him. Exactly how it should be: we lead, they follow, and everyone is content.</p>
@@ -498,7 +496,6 @@ button{font:inherit;color:inherit}
       <div class="portrait" data-char="char_agnes" data-tip="char_agnes"></div>
       <div class="slip torn">
         <p class="slip__name">Agnes von Boemcken</p>
-        <p class="slip__role">Chairwoman of the Women’s League of the German Colonial Society</p>
         <p class="slip__when">Bremen, 1932</p>
         <p class="slip__ai">AI-generated portrait</p>
       </div>
@@ -543,7 +540,6 @@ button{font:inherit;color:inherit}
       <div class="portrait" data-char="char_jagodja2026" data-tip="char_jagodja2026"></div>
       <div class="slip torn">
         <p class="slip__name">Jagodja</p>
-        <p class="slip__role">Eighteen, named after her great-great-great-aunt</p>
         <p class="slip__when">Moshi, 2026</p>
         <p class="slip__ai">AI-generated portrait</p>
       </div>
@@ -699,19 +695,19 @@ var WEISSER = "Weisser, Michael. “Der Elefant – Bremen” [The elephant – 
 var SLOTS = {
   /* --- characters --- */
   char_jagodja1891:{file:"char-jagodja-1891.png",char:1,title:"Jagodja, 1891",
-    alt:"Pencil drawing of Jagodja, a young Chagga woman in a pale dress with a bead necklace. It’s hard to know what Jagodja looked like. This is one AI-generated possibility.",
+    alt:"Jagodja, a woman of Mamba, sister of the mangi Manamia. Pencil drawing of Jagodja, a young Chagga woman in a pale dress with a bead necklace. It’s hard to know what Jagodja looked like. This is one AI-generated possibility.",
     note:"It’s hard to know what Jagodja looked like. This portrait is one AI-generated possibility."},
   char_rosa:{file:"char-rosa-luxemburg.png",char:1,title:"Rosa Luxemburg, 1914",
-    alt:"Pencil drawing of Rosa Luxemburg in a dark suit and long skirt, hands behind her back. AI-generated based on historical photos.",
+    alt:"Rosa Luxemburg, socialist, member of the SPD. Pencil drawing of Rosa Luxemburg in a dark suit and long skirt, hands behind her back. AI-generated based on historical photos.",
     note:"Portrait AI-generated, based on historical photos."},
   char_hedwig:{file:"char-hedwig-heyl.png",char:1,title:"Hedwig Heyl, 1914",
-    alt:"Pencil drawing of Hedwig Heyl, an older woman in a long dress and shawl. AI-generated based on historical photos.",
+    alt:"Hedwig Heyl, leader of the Women’s League of the German Colonial Society. Pencil drawing of Hedwig Heyl, an older woman in a long dress and shawl. AI-generated based on historical photos.",
     note:"Portrait AI-generated, based on historical photos."},
   char_agnes:{file:"char-agnes-von-boemcken.png",char:1,title:"Agnes von Boemcken, 1932",
-    alt:"Pencil drawing of Agnes von Boemcken in a belted coat and wide hat. AI-generated based on one historical photo.",
+    alt:"Agnes von Boemcken, chairwoman of the Women’s League of the German Colonial Society. Pencil drawing of Agnes von Boemcken in a belted coat and wide hat. AI-generated based on one historical photo.",
     note:"Portrait AI-generated, based on one historical photo."},
   char_jagodja2026:{file:"char-jagodja-2026.png",char:1,title:"Jagodja, 2026",
-    alt:"Pencil drawing of Jagodja in 2026, a young woman with long braids in a trouser suit. This character was invented for the sake of telling this story. AI-generated.",
+    alt:"Jagodja, eighteen, named after her great-great-great-aunt. Pencil drawing of Jagodja in 2026, a young woman with long braids in a trouser suit. This character was invented for the sake of telling this story. AI-generated.",
     note:"This character was invented to tell this story. Portrait AI-generated."},
 
   /* --- opening, map, finish --- */
@@ -963,10 +959,10 @@ function placePortraits(){
   $$(".portrait img, .outro-figure img").forEach(function(img){
     if (!img.naturalWidth || window.innerWidth <= 820 && img.closest(".portrait")) { img.style.left = ""; return; }
     var col = img.parentNode, cw = col.clientWidth, w = img.offsetWidth;
-    var right = !!img.closest(".side-right"), left;
-    if (w <= cw) left = (cw - w) / 2;
-    else left = right ? 0 : cw - w;
-    img.style.left = left + "px";
+    var over = Math.max(0, (w - cw) / 2);
+    img.style.left = ((cw - w) / 2) + "px";          /* centred on the paper slip */
+    var holder = img.closest(".chapter") || img.closest(".ride--outro");
+    if (holder) holder.style.setProperty("--push", Math.ceil(over) + "px");
   });
 }
 $$("img[data-stage]").forEach(function(img){
